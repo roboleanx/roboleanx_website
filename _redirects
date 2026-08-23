@@ -19,5 +19,8 @@
 # Robotics → Solutions, robotics tab preselected
 /robotics                /solutions.html?p=robotics 301
 
+# Old Solutions folder URL
+/solutions               /solutions.html            301
+
 # Retired
 /store                   /                          301

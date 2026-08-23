@@ -61,6 +61,15 @@
   [data-r~="stack"] { grid-template-columns: 1fr !important; }
   [data-r~="two"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
   section, header > nav, footer > div { padding-left: 20px !important; padding-right: 20px !important; }
+  [data-r~="brand"] { margin-right: auto !important; }
+  [data-r~="burger"] { display: flex !important; }
+  [data-r~="navpanel"][data-open="false"] { display: none !important; }
+  [data-r~="navpanel"] { position: absolute !important; top: 100% !important; left: 0 !important; right: 0 !important; flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 8px 20px 20px !important; background: color-mix(in srgb, var(--color-bg) 96%, transparent) !important; backdrop-filter: blur(14px); border-bottom: 1px solid var(--color-divider) !important; }
+  [data-r~="navlink"] { font-size: 16.5px !important; opacity: 1 !important; padding: 15px 2px !important; border-top: 1px solid var(--color-divider) !important; }
+  [data-r~="panelcta"] { display: inline-flex !important; justify-content: center; margin-top: 18px !important; padding: 13px 20px !important; font-size: 14.5px !important; }
+  [data-r~="brand"] img { width: 46px !important; height: 46px !important; border-radius: 10px !important; }
+  [data-r~="brand"] span { font-size: 20px !important; }
+  header > nav { position: relative !important; gap: 13px !important; row-gap: 12px !important; padding-top: 12px !important; padding-bottom: 12px !important; }
 }
 @media (max-width: 620px) {
   [data-r~="two"] { grid-template-columns: 1fr !important; }
@@ -74,15 +83,24 @@
 
   <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--color-bg) 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
-      <a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
+      <a href="#top" data-r="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
         <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 72px; height: 72px; border-radius: 14px;">
         <span style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.02em;">RoboLeanX</span>
       </a>
-      <a href="#platform" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Platform</a>
-      <a href="solutions.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Solutions</a>
-      <a href="about.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">About</a>
-      <a href="contact.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Contact</a>
-      <a href="contact.html#demo" class="btn" style="font-size: 13px; white-space: nowrap; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Book demo</a>
+      <button type="button" data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; cursor: pointer;">
+        <span style="display: grid; gap: 5px; width: 20px;">
+          <span style="{{ burgerTop }}"></span>
+          <span style="{{ burgerMid }}"></span>
+          <span style="{{ burgerBot }}"></span>
+        </span>
+      </button>
+      <div data-r="navpanel" data-open="{{ menuOpen }}" onClick="{{ closeMenu }}" style="{{ panelStyle }}">
+        <a href="#platform" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Platform</a>
+        <a href="solutions.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Solutions</a>
+        <a href="about.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">About</a>
+        <a href="contact.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Contact</a>
+        <a data-r="panelcta" href="contact.html#demo" class="btn" style="font-size: 13px; white-space: nowrap; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Book demo</a>
+      </div>
     </nav>
   </header>
 
@@ -239,7 +257,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;autoRotate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
 class Component extends DCLogic {
-  state = { layer: 0, sol: 0, clock: "" };
+  state = { menu: false, layer: 0, sol: 0, clock: "" };
 
   video = React.createRef();
 
@@ -300,6 +318,12 @@ class Component extends DCLogic {
     ];
   }
 
+  menuBar(rot, y) {
+    return ["display:block", "height:2px", "border-radius:2px", "background:var(--color-text)",
+      "transition:transform 0.28s cubic-bezier(0.2,0.7,0.2,1), opacity 0.2s",
+      "transform:translateY(" + y + "px) rotate(" + rot + "deg)"].join(";");
+  }
+
   renderVals() {
     const li = this.state.layer;
     const layers = this.layerData().map((l, i) => ({
@@ -318,6 +342,13 @@ class Component extends DCLogic {
     }));
 
     return {
+      menuOpen: !!this.state.menu,
+      toggleMenu: () => this.setState({ menu: !this.state.menu }),
+      closeMenu: () => { if (this.state.menu) this.setState({ menu: false }); },
+      burgerTop: this.menuBar(this.state.menu ? 45 : 0, this.state.menu ? 7 : 0),
+      burgerMid: this.menuBar(0, 0) + ";opacity:" + (this.state.menu ? 0 : 1),
+      burgerBot: this.menuBar(this.state.menu ? -45 : 0, this.state.menu ? -7 : 0),
+      panelStyle: ["display:flex", "align-items:center", "gap:22px", "z-index:39"].join(";"),
       videoRef: this.video,
       clock: this.state.clock,
       layers,
