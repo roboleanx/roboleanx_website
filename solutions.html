@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/styles.css">
+<script src="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --font-heading-weight: 500;
+    --color-bg: #0a0c26;
+    --color-surface: #151a3a;
+    --color-accent: #38b6f0;
+    --color-accent-100: #ecfbff;
+    --color-accent-200: #cdf1fb;
+    --color-accent-300: #9fe4f7;
+    --color-accent-400: #6fd0f5;
+    --color-accent-500: #38b6f0;
+    --color-accent-600: #2b7fd4;
+    --color-accent-700: #24528f;
+    --color-accent-800: #1c2a63;
+    --color-accent-900: #131b46;
+    --color-section: #141a4a;
+    --color-section-glow: #23276b;
+    --color-divider: color-mix(in srgb, #cfe8ff 16%, transparent);
+  }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; overflow-x: hidden; background: #0a0c26; }
+  @keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(56,182,240,0.35); } 70% { box-shadow: 0 0 0 14px rgba(56,182,240,0); } 100% { box-shadow: 0 0 0 0 rgba(56,182,240,0); } }
+  @keyframes driftGrid { from { transform: translateY(0); } to { transform: translateY(-40px); } }
+  @keyframes scanY { 0% { top: 4%; opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { top: 96%; opacity: 0; } }
+  @keyframes flowRight { from { background-position: 0 0; } to { background-position: 28px 0; } }
+</style>
+</helmet>
+
+<div style="background: #0a0c26; color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
+
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(820px 560px at 84% -12%, rgba(34,211,238,0.12), transparent 70%), radial-gradient(700px 500px at 2% 22%, rgba(59,130,246,0.13), transparent 70%), radial-gradient(640px 480px at 94% 58%, rgba(224,38,200,0.09), transparent 70%);"></div>
+
+  <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, #0a0c26 78%, transparent); border-bottom: 1px solid var(--color-divider);">
+    <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
+        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 72px; height: 72px; border-radius: 14px;">
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.02em;">RoboLeanX</span>
+      </a>
+      <a href="index.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Home</a>
+      <a href="solutions.html" style="color: var(--color-accent); text-decoration: none; font-size: 13.5px; white-space: nowrap;">Solutions</a>
+      <a href="about.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">About</a>
+      <a href="contact.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Contact</a>
+      <a href="contact.html" class="btn" style="font-size: 13px; white-space: nowrap; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Book demo</a>
+    </nav>
+  </header>
+
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 88px 32px 0; animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
+    <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 20px;">Solutions</div>
+    <h1 style="font-size: clamp(40px, 4.6vw, 64px); line-height: 1.05; letter-spacing: -0.03em; max-width: 24ch; margin: 0 0 22px;">Two ways factory intelligence <span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">goes to work</span>.</h1>
+    <p style="font-size: 17.5px; line-height: 1.6; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 34px;">Cameras that operate like people, and robots that learn like apprentices — running on the same perception and reasoning layer.</p>
+    <div style="display: inline-flex; padding: 4px; border: 1px solid var(--color-divider); border-radius: 999px; gap: 4px;">
+      <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="2">
+        <button type="button" onClick="{{ tab.select }}" style="{{ tab.style }}">{{ tab.label }}</button>
+      </sc-for>
+    </div>
+  </section>
+
+  <sc-if value="{{ isVision }}" hint-placeholder-val="{{ true }}">
+    <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 52px 32px 0;">
+      <div style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
+        <div>
+          <h2 style="font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.026em; margin: 0 0 16px; max-width: 20ch;">Give your factory camera a job.</h2>
+          <p style="font-size: 16.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 44ch; margin: 0 0 26px;">AI operators watch live operations, detect exceptions, and alert your team — with inspections set to your standards and checks assigned in plain English.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="tag tag-outline">Quality</span>
+            <span class="tag tag-neutral">Safety</span>
+            <span class="tag tag-neutral">Operations</span>
+          </div>
+        </div>
+        <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 8px; box-shadow: var(--shadow-md);">
+          <video ref="{{ videoRef }}" src="assets/vision-operator-loop.mp4" autoPlay="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsInline="{{ true }}" preload="metadata" style="display: block; width: 100%; height: auto; border-radius: var(--radius-sm);"></video>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 56px;">
+        <sc-for list="{{ visionJobs }}" as="j" hint-placeholder-count="3">
+          <div style="padding: 26px 24px 30px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
+            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee,#3b82f6 45%,#e026c8); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 28px;">{{ j.kicker }}</div>
+            <h3 style="font-size: 20px; letter-spacing: -0.018em; margin: 0 0 10px;">{{ j.title }}</h3>
+            <p style="font-size: 14.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 66%, transparent); margin: 0;">{{ j.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top: 64px;">
+        <h3 style="font-size: 26px; letter-spacing: -0.022em; margin: 0 0 8px;">Your infrastructure, your rules.</h3>
+        <p style="font-size: 15.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 66%, transparent); max-width: 46ch; margin: 0 0 26px;">Deploy on-premises or hybrid — choose what fits your business. Video never has to leave your network.</p>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px;">
+          <sc-for list="{{ pipeline }}" as="p" hint-placeholder-count="4">
+            <div style="position: relative; padding: 20px 18px 22px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); transition: border-color 0.35s, transform 0.35s;" style-hover="border-color: color-mix(in srgb, #38b6f0 65%, transparent); transform: translateY(-4px);">
+              <div style="font-size: 11px; letter-spacing: 0.1em; color: color-mix(in srgb, var(--color-text) 45%, transparent); margin-bottom: 12px;">{{ p.num }}</div>
+              <div style="font-family: var(--font-heading); font-size: 17px; letter-spacing: -0.015em; margin-bottom: 6px;">{{ p.title }}</div>
+              <div style="font-size: 13.5px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent);">{{ p.body }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ isRobotics }}" hint-placeholder-val="{{ false }}">
+    <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 52px 32px 0;">
+      <div style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
+        <div>
+          <h2 style="font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.026em; margin: 0 0 16px; max-width: 22ch;">Robots taught by demonstration, not programming.</h2>
+          <p style="font-size: 16.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 44ch; margin: 0 0 26px;">RoboLeanX gives robots the intelligence to see, reason, and act in real production settings — then self-adapt as parts and conditions drift.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="tag tag-outline">Assembly</span>
+            <span class="tag tag-neutral">Kitting</span>
+            <span class="tag tag-neutral">Machine tending</span>
+            <span class="tag tag-neutral">Packaging</span>
+          </div>
+        </div>
+        <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 8px; box-shadow: var(--shadow-md);">
+          <img src="assets/robot-cell.png" alt="Dual-arm robot cell handling a machined part" style="display: block; width: 100%; height: auto; border-radius: var(--radius-sm);">
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 56px;">
+        <sc-for list="{{ loop }}" as="l" hint-placeholder-count="3">
+          <div style="padding: 26px 24px 30px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 26px;">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background-image: linear-gradient(96deg,#22d3ee,#e026c8);"></span>
+              <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-300);">{{ l.step }}</span>
+            </div>
+            <h3 style="font-size: 24px; letter-spacing: -0.02em; margin: 0 0 10px;">{{ l.title }}</h3>
+            <p style="font-size: 14.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 66%, transparent); margin: 0;">{{ l.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="margin-top: 64px;">
+        <h3 style="font-size: 26px; letter-spacing: -0.022em; margin: 0 0 26px;">Pilot paths</h3>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;">
+          <sc-for list="{{ pilots }}" as="p" hint-placeholder-count="2">
+            <div style="padding: 30px 28px 34px; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); transition: border-color 0.35s, transform 0.35s;" style-hover="border-color: color-mix(in srgb, #38b6f0 65%, transparent); transform: translateY(-4px);">
+              <div style="font-family: var(--font-heading); font-size: 46px; line-height: 1; letter-spacing: -0.03em; background-image: linear-gradient(96deg,rgba(34,211,238,0.6),rgba(59,130,246,0.55) 40%,rgba(224,38,200,0.5)); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 22px;">{{ p.num }}</div>
+              <h4 style="font-size: 22px; letter-spacing: -0.018em; margin: 0 0 10px;">{{ p.title }}</h4>
+              <p style="font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 66%, transparent); max-width: 40ch; margin: 0 0 18px;">{{ p.body }}</p>
+              <span style="font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300);">{{ p.meta }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 104px 32px 0;">
+    <div style="max-width: 560px; margin-bottom: 38px;">
+      <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 18px;">Where it runs today</div>
+      <h2 style="font-size: clamp(26px, 2.8vw, 38px); line-height: 1.12; letter-spacing: -0.024em; margin: 0 0 14px;">Same layer, different floors.</h2>
+      <p style="font-size: 15.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 66%, transparent); margin: 0;">What each environment usually starts with, and what it adds once the first workflow holds.</p>
+    </div>
+    <div style="display: grid; gap: 2px;">
+      <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="4">
+        <div style="display: grid; grid-template-columns: 0.9fr 1fr 1fr; gap: 32px; align-items: start; padding: 28px 20px; border-top: 1px solid var(--color-divider); transition: background 0.3s, padding-left 0.3s;" style-hover="background: color-mix(in srgb, var(--color-text) 4%, transparent); padding-left: 30px;">
+          <div>
+            <div style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.018em; margin-bottom: 6px;">{{ ind.name }}</div>
+            <div style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 52%, transparent);">{{ ind.constraint }}</div>
+          </div>
+          <div>
+            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 42%, transparent); margin-bottom: 8px;">Starts with</div>
+            <div style="font-size: 14.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent);">{{ ind.first }}</div>
+          </div>
+          <div>
+            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 42%, transparent); margin-bottom: 8px;">Then adds</div>
+            <div style="font-size: 14.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 60%, transparent);">{{ ind.next }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="position: relative; z-index: 1; margin: 104px 0 0; padding: 88px 32px; text-align: center; background: radial-gradient(620px 300px at 24% 0%, rgba(34,211,238,0.20), transparent 70%), radial-gradient(620px 320px at 78% 8%, rgba(224,38,200,0.18), transparent 70%), radial-gradient(900px 420px at 50% 0%, var(--color-section-glow), var(--color-section) 72%);">
+    <div style="max-width: 760px; margin: 0 auto;">
+      <h2 style="font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 26px;">{{ ctaHeadline }}</h2>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html#demo" class="btn" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#141a4a,#141a4a), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Request private demo</a>
+        <a href="contact.html#pilot" class="btn btn-secondary" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px;">Apply for robotics pilot</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="position: relative; z-index: 1; border-top: 1px solid var(--color-divider);">
+    <div style="max-width: 1220px; margin: 0 auto; padding: 40px 32px 0; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+      <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent);">Programs &amp; partners</span>
+      <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+        <img src="assets/nvidia-inception.png" alt="NVIDIA Inception Program" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 12px 16px;">
+        <img src="assets/google-for-startups.png" alt="Google for Startups" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 16px 20px;">
+      </div>
+    </div>
+    <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX LLC</div>
+        <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
+      </div>
+      <div>
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
+        <a href="mailto:info@roboleanx.com">info@roboleanx.com</a>
+      </div>
+      <div style="align-self: flex-end;">© 2026 RoboLeanX. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { tab: 0 };
+
+  video = React.createRef();
+
+  playVideo() {
+    const el = this.video.current;
+    if (!el) return;
+    el.muted = true;
+    const p = el.play();
+    if (p && p.catch) p.catch(() => {});
+  }
+
+  componentDidMount() {
+    const p = new URLSearchParams(location.search).get("p");
+    if (p === "robotics") this.setState({ tab: 1 });
+    this.playVideo();
+  }
+  componentDidUpdate() { if (this.state.tab === 0) this.playVideo(); }
+
+  renderVals() {
+    const t = this.state.tab;
+    const labels = ["Vision AI Operators", "Cognitive Robotics"];
+    return {
+      videoRef: this.video,
+      isVision: t === 0,
+      isRobotics: t === 1,
+      ctaHeadline: t === 0 ? "Ready to give your cameras a job?" : "Ready to test robotic execution on your workflow?",
+      tabs: labels.map((label, i) => ({
+        label,
+        select: () => this.setState({ tab: i }),
+        style: [
+          "cursor:pointer", "border:0", "border-radius:999px", "padding:9px 18px",
+          "font-family:var(--font-heading)", "font-size:13.5px", "white-space:nowrap",
+          "color:" + (i === t ? "#ecfbff" : "color-mix(in srgb, var(--color-text) 58%, transparent)"),
+          "background:" + (i === t ? "linear-gradient(96deg, rgba(34,211,238,0.28), rgba(59,130,246,0.26) 45%, rgba(224,38,200,0.24))" : "transparent"),
+          "transition:background 0.3s, color 0.3s"
+        ].join(";")
+      })),
+      visionJobs: [
+        { kicker: "Quality", title: "Inspection to your standard", body: "Configured checks for defects, missing parts, labels, and assembly completeness." },
+        { kicker: "Safety", title: "Eyes on the risky moments", body: "Prompted monitoring for PPE, blocked aisles, restricted zones, and near misses." },
+        { kicker: "Operations", title: "Where the minutes go", body: "Prompted monitoring for downtime, waiting material, coverage gaps, and exceptions." }
+      ],
+      pipeline: [
+        { num: "01", title: "Connect", body: "Point the operator at existing cameras — RTSP, on-prem, no new hardware." },
+        { num: "02", title: "Assign", body: "Describe the check in plain English; set the standard it should hold." },
+        { num: "03", title: "Watch", body: "The operator runs continuously and flags only real exceptions." },
+        { num: "04", title: "Act", body: "Alerts route to the team, with clips and shift-level reporting." }
+      ],
+      loop: [
+        { step: "See", title: "Perceive the scene", body: "Understand parts, tools, people, and motion in the real cell — not a fixtured mock-up." },
+        { step: "Reason", title: "Interpret the workflow", body: "Hold workflow state, judge what changed, and decide the next action." },
+        { step: "Act", title: "Execute and improve", body: "Run the task and keep improving from each demonstration and correction." }
+      ],
+      industries: [
+        { name: "Automotive & metal fabrication", constraint: "High mix, tight tolerances, scrap costs real money.",
+          first: "Inspection on machined and welded parts, plus downtime attribution across cells.",
+          next: "Machine tending and kitting on the cells that idle waiting for an operator." },
+        { name: "Food & beverage packaging", constraint: "Line speed and audit exposure.",
+          first: "Label, seal, and fill checks with clip-backed alerts for QA records.",
+          next: "End-of-line packing and case handling where staffing turns over fastest." },
+        { name: "Electronics assembly", constraint: "Fine detail, frequent product changeover.",
+          first: "Assembly completeness and component presence at each station.",
+          next: "Demonstration-taught assembly steps that re-teach in hours, not weeks." },
+        { name: "Warehousing & 3PL", constraint: "Volume swings and safety zones.",
+          first: "Blocked aisle, PPE, and dock congestion monitoring across existing cameras.",
+          next: "Binning and sorting on variable-position picks without fixed tooling." }
+      ],
+      pilots: [
+        { num: "01", title: "Trailblazer — on-site factory pilot", body: "We deploy robots in your factory and teach them your workflow by demonstration in four weeks.", meta: "4 weeks · your floor" },
+        { num: "02", title: "Proof Seekers — remote workflow pilot", body: "You ship your parts. We teach robots your workflow and share results with your team by demo.", meta: "Off-site · your parts" }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>

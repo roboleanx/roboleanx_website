@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/styles.css">
+<script src="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --font-heading-weight: 500;
+    --color-bg: #0a0c26;
+    --color-surface: #151a3a;
+    --color-accent: #38b6f0;
+    --color-accent-100: #ecfbff;
+    --color-accent-200: #cdf1fb;
+    --color-accent-300: #9fe4f7;
+    --color-accent-400: #6fd0f5;
+    --color-accent-500: #38b6f0;
+    --color-accent-600: #2b7fd4;
+    --color-accent-700: #24528f;
+    --color-accent-800: #1c2a63;
+    --color-accent-900: #131b46;
+    --color-section: #141a4a;
+    --color-section-glow: #23276b;
+    --color-divider: color-mix(in srgb, #cfe8ff 16%, transparent);
+  }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; overflow-x: hidden; background: #0a0c26; }
+  @keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(56,182,240,0.35); } 70% { box-shadow: 0 0 0 14px rgba(56,182,240,0); } 100% { box-shadow: 0 0 0 0 rgba(56,182,240,0); } }
+  @keyframes driftGrid { from { transform: translateY(0); } to { transform: translateY(-40px); } }
+</style>
+</helmet>
+
+<div style="background: #0a0c26; color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
+
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(820px 560px at 86% -14%, rgba(34,211,238,0.12), transparent 70%), radial-gradient(700px 500px at 0% 26%, rgba(59,130,246,0.13), transparent 70%), radial-gradient(640px 480px at 90% 70%, rgba(224,38,200,0.09), transparent 70%);"></div>
+
+  <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, #0a0c26 78%, transparent); border-bottom: 1px solid var(--color-divider);">
+    <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
+      <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
+        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 72px; height: 72px; border-radius: 14px;">
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.02em;">RoboLeanX</span>
+      </a>
+      <a href="index.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Home</a>
+      <a href="solutions.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Solutions</a>
+      <a href="about.html" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">About</a>
+      <a href="contact.html" style="color: var(--color-accent); text-decoration: none; font-size: 13.5px; white-space: nowrap;">Contact</a>
+    </nav>
+  </header>
+
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 88px 32px 0; animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
+    <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 20px;">Contact</div>
+    <h1 style="font-size: clamp(40px, 4.6vw, 62px); line-height: 1.05; letter-spacing: -0.03em; max-width: 22ch; margin: 0 0 20px;">Let's put a workflow <span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">under the lens</span>.</h1>
+    <p style="font-size: 17.5px; line-height: 1.6; max-width: 50ch; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0;">Tell us the line, the part, and the problem. We reply within two business days with a concrete next step — demo, pilot scoping, or a straight no.</p>
+  </section>
+
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 56px 32px 0; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: start;">
+
+    <div style="padding: 32px 30px 34px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 40%, #0a0c26)); box-shadow: var(--shadow-sm);">
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px;">
+            <sc-for list="{{ intents }}" as="i" hint-placeholder-count="3">
+              <button type="button" onClick="{{ i.select }}" style="{{ i.style }}">{{ i.label }}</button>
+            </sc-for>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+            <div class="field">
+              <label for="c-name">Name <span style="color: #f0709a;">*</span></label>
+              <input id="c-name" class="input" type="text" value="{{ name }}" onChange="{{ setName }}" placeholder="Jane Okafor" style="{{ nameStyle }}">
+            </div>
+            <div class="field">
+              <label for="c-email">Work email <span style="color: #f0709a;">*</span></label>
+              <input id="c-email" class="input" type="email" value="{{ email }}" onChange="{{ setEmail }}" placeholder="jane@company.com" style="{{ emailStyle }}">
+            </div>
+          </div>
+          <sc-if value="{{ isBusiness }}" hint-placeholder-val="{{ true }}">
+            <div class="field" style="margin-bottom: 14px;">
+              <label for="c-company">Company <span style="color: #f0709a;">*</span></label>
+              <input id="c-company" class="input" type="text" value="{{ company }}" onChange="{{ setCompany }}" placeholder="Piedmont Precision" style="{{ companyStyle }}">
+            </div>
+          </sc-if>
+          <sc-if value="{{ isPilot }}" hint-placeholder-val="{{ false }}">
+            <div class="field" style="margin-bottom: 14px;">
+              <label>Pilot path</label>
+              <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                <sc-for list="{{ paths }}" as="p" hint-placeholder-count="2">
+                  <button type="button" onClick="{{ p.select }}" style="{{ p.style }}">{{ p.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+          <div class="field" style="margin-bottom: 16px;">
+            <label for="c-msg">{{ msgLabel }}</label>
+            <textarea id="c-msg" class="input" value="{{ message }}" onChange="{{ setMessage }}" placeholder="{{ msgPlaceholder }}"></textarea>
+          </div>
+          <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size: 13px; color: #f0709a; margin-bottom: 16px;">{{ errorText }}</div>
+          </sc-if>
+          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+            <button type="button" onClick="{{ submit }}" class="btn" style="white-space: nowrap; padding: 11px 22px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#151a3a,#151a3a), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">{{ submitLabel }}</button>
+            <span style="font-size: 12.5px; color: color-mix(in srgb, var(--color-text) 52%, transparent);">{{ hint }}</span>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="padding: 26px 4px 20px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 18px;">
+            <span style="width: 9px; height: 9px; border-radius: 50%; background-image: linear-gradient(96deg,#22d3ee,#e026c8); animation: pulseRing 2.4s ease-out infinite;"></span>
+            <span style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300);">Request received</span>
+          </div>
+          <h2 style="font-size: 28px; letter-spacing: -0.022em; margin: 0 0 12px;">{{ thanksTitle }}</h2>
+          <p style="font-size: 15.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 68%, transparent); max-width: 42ch; margin: 0 0 22px;">We'll come back within two business days with a concrete next step. If it's urgent, mail us directly at info@roboleanx.com.</p>
+          <button type="button" onClick="{{ reset }}" class="btn btn-secondary" style="white-space: nowrap; padding: 10px 18px; font-size: 14px;">Send another</button>
+        </div>
+      </sc-if>
+    </div>
+
+    <div>
+      <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 8px; box-shadow: var(--shadow-md); margin-bottom: 28px;">
+        <img src="assets/robot-cell.png" alt="Dual-arm robot cell handling a machined part" style="display: block; width: 100%; height: auto; border-radius: var(--radius-sm);">
+      </div>
+      <div style="display: grid; gap: 2px;">
+        <sc-for list="{{ details }}" as="d" hint-placeholder-count="4">
+          <div style="display: flex; align-items: baseline; gap: 20px; padding: 20px 14px; border-top: 1px solid var(--color-divider); transition: background 0.3s, padding-left 0.3s;" style-hover="background: color-mix(in srgb, var(--color-text) 4%, transparent); padding-left: 22px;">
+            <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; min-width: 96px; color: color-mix(in srgb, var(--color-text) 48%, transparent);">{{ d.label }}</span>
+            <span style="font-size: 15px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 82%, transparent);">{{ d.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="position: relative; z-index: 1; margin: 104px 0 0; padding: 76px 32px; text-align: center; background: radial-gradient(620px 300px at 24% 0%, rgba(34,211,238,0.20), transparent 70%), radial-gradient(620px 320px at 78% 8%, rgba(224,38,200,0.18), transparent 70%), radial-gradient(900px 420px at 50% 0%, var(--color-section-glow), var(--color-section) 72%);">
+    <h2 style="font-size: clamp(28px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 12px;">Prefer to see it running first?</h2>
+    <p style="font-size: 17px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 74%, transparent); margin: 0 0 26px;">Walk the platform with us on a live line.</p>
+    <a href="solutions.html" class="btn" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#141a4a,#141a4a), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Explore solutions</a>
+  </section>
+
+  <footer style="position: relative; z-index: 1; border-top: 1px solid var(--color-divider);">
+    <div style="max-width: 1220px; margin: 0 auto; padding: 40px 32px 0; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
+      <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent);">Programs &amp; partners</span>
+      <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+        <img src="assets/nvidia-inception.png" alt="NVIDIA Inception Program" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 12px 16px;">
+        <img src="assets/google-for-startups.png" alt="Google for Startups" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 16px 20px;">
+      </div>
+    </div>
+    <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
+      <div>
+        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX LLC</div>
+        <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
+      </div>
+      <div>
+        <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
+        <a href="mailto:info@roboleanx.com">info@roboleanx.com</a>
+      </div>
+      <div style="align-self: flex-end;">© 2026 RoboLeanX. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { intent: 0, path: 0, name: "", company: "", email: "", message: "", touched: false, sent: false };
+
+  set(key) { return e => this.setState({ [key]: e.target.value }); }
+
+  pill(active) {
+    return [
+      "cursor:pointer", "border:1px solid", "border-radius:999px", "padding:7px 15px",
+      "font-family:var(--font-heading)", "font-size:13px", "white-space:nowrap",
+      "border-color:" + (active ? "transparent" : "var(--color-divider)"),
+      "color:" + (active ? "#ecfbff" : "color-mix(in srgb, var(--color-text) 58%, transparent)"),
+      "background:" + (active ? "linear-gradient(96deg, rgba(34,211,238,0.28), rgba(59,130,246,0.26) 45%, rgba(224,38,200,0.24))" : "transparent"),
+      "transition:background 0.3s, color 0.3s, border-color 0.3s"
+    ].join(";");
+  }
+
+  componentDidMount() {
+    const h = (window.location.hash || "").replace("#", "").toLowerCase();
+    if (h === "pilot") this.setState({ intent: 1 });
+    else if (h === "demo") this.setState({ intent: 0 });
+  }
+
+  fieldStyle(invalid) {
+    return invalid ? "border-color:#f0709a" : "";
+  }
+
+  renderVals() {
+    const s = this.state;
+    const intents = ["Private demo", "Robotics pilot", "General question"];
+    const emailOk = /.+@.+\..+/.test(s.email.trim());
+    const needCompany = s.intent !== 2;
+    const missing = [];
+    if (!s.name.trim()) missing.push("name");
+    if (!emailOk) missing.push("a valid work email");
+    if (needCompany && !s.company.trim()) missing.push("company");
+    const ready = missing.length === 0;
+    const t = s.touched;
+    const copy = [
+      { msgLabel: "Which line should we demo against?", msgPlaceholder: "End-of-line inspection on welded brackets; two operators, 3% escape rate.", submitLabel: "Request demo" },
+      { msgLabel: "The workflow you want a robot to learn", msgPlaceholder: "Kitting six SKUs into trays; part position varies, changeover twice a shift.", submitLabel: "Apply for pilot" },
+      { msgLabel: "What's on your mind?", msgPlaceholder: "Ask us anything — technical, commercial, or hiring.", submitLabel: "Send message" }
+    ][s.intent];
+    return {
+      sent: s.sent,
+      notSent: !s.sent,
+      isDemo: s.intent === 0,
+      isPilot: s.intent === 1,
+      isGeneral: s.intent === 2,
+      isBusiness: s.intent !== 2,
+      msgLabel: copy.msgLabel, msgPlaceholder: copy.msgPlaceholder, submitLabel: copy.submitLabel,
+      name: s.name, company: s.company, email: s.email, message: s.message,
+      setName: this.set("name"), setCompany: this.set("company"), setEmail: this.set("email"),
+      setMessage: this.set("message"),
+      paths: ["On-site (Trailblazer)", "Remote (Proof Seekers)"].map((label, i) => ({
+        label, select: () => this.setState({ path: i }), style: this.pill(i === s.path)
+      })),
+      nameStyle: this.fieldStyle(t && !s.name.trim()),
+      emailStyle: this.fieldStyle(t && !emailOk),
+      companyStyle: this.fieldStyle(t && needCompany && !s.company.trim()),
+      showError: t && !ready,
+      errorText: "Please add " + missing.join(", ") + ".",
+      hint: ready ? "We reply within two business days." : "Fields marked * are required.",
+      thanksTitle: s.name ? "Thanks, " + s.name.split(" ")[0] + "." : "Thanks — we've got it.",
+      submit: () => this.setState({ touched: true, sent: ready }),
+      reset: () => this.setState({ sent: false, touched: false, message: "" }),
+      intents: intents.map((label, i) => ({
+        label, select: () => this.setState({ intent: i }), style: this.pill(i === s.intent)
+      })),
+      details: [
+        { label: "Email", value: "info@roboleanx.com" },
+        { label: "Office", value: "3540 Toringdon Way, Suite 200 · Charlotte, NC 28277" },
+        { label: "Response", value: "Within two business days" },
+        { label: "Partner", value: "NVIDIA Inception program member" }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
