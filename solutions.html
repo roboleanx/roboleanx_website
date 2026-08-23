@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solutions — Vision AI Operators and Cognitive Robotics | RoboLeanX</title>
+<meta name="description" content="Two ways factory intelligence goes to work: AI operators on your existing cameras, and robots taught by demonstration. On-premises or hybrid.">
+<link rel="canonical" href="https://roboleanx.com/solutions.html">
+<meta name="theme-color" content="#0a0c26">
+<link rel="icon" href="assets/logo-x.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RoboLeanX">
+<meta property="og:title" content="Solutions — Vision AI Operators and Cognitive Robotics | RoboLeanX">
+<meta property="og:description" content="Two ways factory intelligence goes to work: AI operators on your existing cameras, and robots taught by demonstration. On-premises or hybrid.">
+<meta property="og:url" content="https://roboleanx.com/solutions.html">
+<meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
+<meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -41,6 +53,16 @@
   @keyframes scanY { 0% { top: 4%; opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { top: 96%; opacity: 0; } }
   @keyframes flowRight { from { background-position: 0 0; } to { background-position: 28px 0; } }
 </style>
+<style>
+@media (max-width: 900px) {
+  [data-r~="stack"] { grid-template-columns: 1fr !important; }
+  [data-r~="two"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  section, header > nav, footer > div { padding-left: 20px !important; padding-right: 20px !important; }
+}
+@media (max-width: 620px) {
+  [data-r~="two"] { grid-template-columns: 1fr !important; }
+}
+</style>
 </helmet>
 
 <div style="background: #0a0c26; color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
@@ -74,7 +96,7 @@
 
   <sc-if value="{{ isVision }}" hint-placeholder-val="{{ true }}">
     <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 52px 32px 0;">
-      <div style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
+      <div data-r="stack" style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
         <div>
           <h2 style="font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.026em; margin: 0 0 16px; max-width: 20ch;">Give your factory camera a job.</h2>
           <p style="font-size: 16.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 44ch; margin: 0 0 26px;">AI operators watch live operations, detect exceptions, and alert your team — with inspections set to your standards and checks assigned in plain English.</p>
@@ -89,7 +111,7 @@
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 56px;">
+      <div data-r="two" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 56px;">
         <sc-for list="{{ visionJobs }}" as="j" hint-placeholder-count="3">
           <div style="padding: 26px 24px 30px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
             <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee,#3b82f6 45%,#e026c8); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 28px;">{{ j.kicker }}</div>
@@ -102,7 +124,7 @@
       <div style="margin-top: 64px;">
         <h3 style="font-size: 26px; letter-spacing: -0.022em; margin: 0 0 8px;">Your infrastructure, your rules.</h3>
         <p style="font-size: 15.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 66%, transparent); max-width: 46ch; margin: 0 0 26px;">Deploy on-premises or hybrid — choose what fits your business. Video never has to leave your network.</p>
-        <div style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px;">
+        <div data-r="two" style="display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px;">
           <sc-for list="{{ pipeline }}" as="p" hint-placeholder-count="4">
             <div style="position: relative; padding: 20px 18px 22px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); transition: border-color 0.35s, transform 0.35s;" style-hover="border-color: color-mix(in srgb, #38b6f0 65%, transparent); transform: translateY(-4px);">
               <div style="font-size: 11px; letter-spacing: 0.1em; color: color-mix(in srgb, var(--color-text) 45%, transparent); margin-bottom: 12px;">{{ p.num }}</div>
@@ -117,7 +139,7 @@
 
   <sc-if value="{{ isRobotics }}" hint-placeholder-val="{{ false }}">
     <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 52px 32px 0;">
-      <div style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
+      <div data-r="stack" style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
         <div>
           <h2 style="font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.026em; margin: 0 0 16px; max-width: 22ch;">Robots taught by demonstration, not programming.</h2>
           <p style="font-size: 16.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 44ch; margin: 0 0 26px;">RoboLeanX gives robots the intelligence to see, reason, and act in real production settings — then self-adapt as parts and conditions drift.</p>
@@ -133,7 +155,7 @@
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 56px;">
+      <div data-r="two" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; margin-top: 56px;">
         <sc-for list="{{ loop }}" as="l" hint-placeholder-count="3">
           <div style="padding: 26px 24px 30px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
             <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 26px;">
@@ -148,7 +170,7 @@
 
       <div style="margin-top: 64px;">
         <h3 style="font-size: 26px; letter-spacing: -0.022em; margin: 0 0 26px;">Pilot paths</h3>
-        <div style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;">
+        <div data-r="stack" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;">
           <sc-for list="{{ pilots }}" as="p" hint-placeholder-count="2">
             <div style="padding: 30px 28px 34px; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); transition: border-color 0.35s, transform 0.35s;" style-hover="border-color: color-mix(in srgb, #38b6f0 65%, transparent); transform: translateY(-4px);">
               <div style="font-family: var(--font-heading); font-size: 46px; line-height: 1; letter-spacing: -0.03em; background-image: linear-gradient(96deg,rgba(34,211,238,0.6),rgba(59,130,246,0.55) 40%,rgba(224,38,200,0.5)); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 22px;">{{ p.num }}</div>
@@ -170,7 +192,7 @@
     </div>
     <div style="display: grid; gap: 2px;">
       <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="4">
-        <div style="display: grid; grid-template-columns: 0.9fr 1fr 1fr; gap: 32px; align-items: start; padding: 28px 20px; border-top: 1px solid var(--color-divider); transition: background 0.3s, padding-left 0.3s;" style-hover="background: color-mix(in srgb, var(--color-text) 4%, transparent); padding-left: 30px;">
+        <div data-r="stack" style="display: grid; grid-template-columns: 0.9fr 1fr 1fr; gap: 32px; align-items: start; padding: 28px 20px; border-top: 1px solid var(--color-divider); transition: background 0.3s, padding-left 0.3s;" style-hover="background: color-mix(in srgb, var(--color-text) 4%, transparent); padding-left: 30px;">
           <div>
             <div style="font-family: var(--font-heading); font-size: 20px; letter-spacing: -0.018em; margin-bottom: 6px;">{{ ind.name }}</div>
             <div style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 52%, transparent);">{{ ind.constraint }}</div>

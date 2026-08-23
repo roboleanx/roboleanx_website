@@ -1,0 +1,23 @@
+# Squarespace → new site. 301 = permanent, passes SEO equity.
+
+# Home variants
+/home                    /                          301
+/home2                   /                          301
+/homev2                  /                          301
+
+# Direct equivalents
+/about                   /about.html                301
+/contact                 /contact.html              301
+/join-pilot              /contact.html#pilot        301
+
+# Vision / operator pages → Solutions, vision tab preselected
+/operatorai              /solutions.html?p=vision   301
+/quality-inspection-ai   /solutions.html?p=vision   301
+/safetyai                /solutions.html?p=vision   301
+/safetyai-1              /solutions.html?p=vision   301
+
+# Robotics → Solutions, robotics tab preselected
+/robotics                /solutions.html?p=robotics 301
+
+# Retired
+/store                   /                          301

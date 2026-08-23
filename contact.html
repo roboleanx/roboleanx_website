@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact RoboLeanX — request a demo or apply for a robotics pilot</title>
+<meta name="description" content="Tell us which line to demo against, or the workflow you want a robot to learn. We reply within two business days.">
+<link rel="canonical" href="https://roboleanx.com/contact.html">
+<meta name="theme-color" content="#0a0c26">
+<link rel="icon" href="assets/logo-x.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RoboLeanX">
+<meta property="og:title" content="Contact RoboLeanX — request a demo or apply for a robotics pilot">
+<meta property="og:description" content="Tell us which line to demo against, or the workflow you want a robot to learn. We reply within two business days.">
+<meta property="og:url" content="https://roboleanx.com/contact.html">
+<meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
+<meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -39,11 +51,30 @@
   @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(56,182,240,0.35); } 70% { box-shadow: 0 0 0 14px rgba(56,182,240,0); } 100% { box-shadow: 0 0 0 0 rgba(56,182,240,0); } }
   @keyframes driftGrid { from { transform: translateY(0); } to { transform: translateY(-40px); } }
 </style>
+<style>
+@media (max-width: 900px) {
+  [data-r~="stack"] { grid-template-columns: 1fr !important; }
+  [data-r~="two"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  section, header > nav, footer > div { padding-left: 20px !important; padding-right: 20px !important; }
+}
+@media (max-width: 620px) {
+  [data-r~="two"] { grid-template-columns: 1fr !important; }
+}
+</style>
 </helmet>
 
 <div style="background: #0a0c26; color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
 
   <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(820px 560px at 86% -14%, rgba(34,211,238,0.12), transparent 70%), radial-gradient(700px 500px at 0% 26%, rgba(59,130,246,0.13), transparent 70%), radial-gradient(640px 480px at 90% 70%, rgba(224,38,200,0.09), transparent 70%);"></div>
+
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="display: none;">
+    <input type="text" name="bot-field">
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="text" name="company">
+    <input type="text" name="intent">
+    <textarea name="message"></textarea>
+  </form>
 
   <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, #0a0c26 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
@@ -64,7 +95,7 @@
     <p style="font-size: 17.5px; line-height: 1.6; max-width: 50ch; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0;">Tell us the line, the part, and the problem. We reply within two business days with a concrete next step — demo, pilot scoping, or a straight no.</p>
   </section>
 
-  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 56px 32px 0; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: start;">
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 56px 32px 0; display: grid; grid-template-columns: 1.05fr 0.95fr;" data-r="stack gap: 48px; align-items: start;">
 
     <div style="padding: 32px 30px 34px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 40%, #0a0c26)); box-shadow: var(--shadow-sm);">
       <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
@@ -74,7 +105,7 @@
               <button type="button" onClick="{{ i.select }}" style="{{ i.style }}">{{ i.label }}</button>
             </sc-for>
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+          <div data-r="two" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
             <div class="field">
               <label for="c-name">Name <span style="color: #f0709a;">*</span></label>
               <input id="c-name" class="input" type="text" value="{{ name }}" onChange="{{ setName }}" placeholder="Jane Okafor" style="{{ nameStyle }}">
@@ -197,6 +228,17 @@ class Component extends DCLogic {
     return invalid ? "border-color:#f0709a" : "";
   }
 
+  postForm() {
+    const s = this.state;
+    const intent = ["Demo request", "Robotics pilot", "General"][s.intent] || "General";
+    const body = new URLSearchParams({
+      "form-name": "contact", name: s.name || "", email: s.email || "",
+      company: s.company || "", intent: intent, message: s.message || ""
+    }).toString();
+    fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
+      .catch(() => {});
+  }
+
   renderVals() {
     const s = this.state;
     const intents = ["Private demo", "Robotics pilot", "General question"];
@@ -234,7 +276,7 @@ class Component extends DCLogic {
       errorText: "Please add " + missing.join(", ") + ".",
       hint: ready ? "We reply within two business days." : "Fields marked * are required.",
       thanksTitle: s.name ? "Thanks, " + s.name.split(" ")[0] + "." : "Thanks — we've got it.",
-      submit: () => this.setState({ touched: true, sent: ready }),
+      submit: () => { this.setState({ touched: true, sent: ready }); if (ready) this.postForm(); },
       reset: () => this.setState({ sent: false, touched: false, message: "" }),
       intents: intents.map((label, i) => ({
         label, select: () => this.setState({ intent: i }), style: this.pill(i === s.intent)

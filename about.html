@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About RoboLeanX — factory intelligence, built in Charlotte</title>
+<meta name="description" content="Why we believe intelligence belongs on the factory floor, not in a dashboard — and the team building it.">
+<link rel="canonical" href="https://roboleanx.com/about.html">
+<meta name="theme-color" content="#0a0c26">
+<link rel="icon" href="assets/logo-x.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RoboLeanX">
+<meta property="og:title" content="About RoboLeanX — factory intelligence, built in Charlotte">
+<meta property="og:description" content="Why we believe intelligence belongs on the factory floor, not in a dashboard — and the team building it.">
+<meta property="og:url" content="https://roboleanx.com/about.html">
+<meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
+<meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -39,6 +51,16 @@
   @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(56,182,240,0.35); } 70% { box-shadow: 0 0 0 14px rgba(56,182,240,0); } 100% { box-shadow: 0 0 0 0 rgba(56,182,240,0); } }
   @keyframes driftGrid { from { transform: translateY(0); } to { transform: translateY(-40px); } }
 </style>
+<style>
+@media (max-width: 900px) {
+  [data-r~="stack"] { grid-template-columns: 1fr !important; }
+  [data-r~="two"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  section, header > nav, footer > div { padding-left: 20px !important; padding-right: 20px !important; }
+}
+@media (max-width: 620px) {
+  [data-r~="two"] { grid-template-columns: 1fr !important; }
+}
+</style>
 </helmet>
 
 <div style="background: #0a0c26; color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
@@ -59,7 +81,7 @@
     </nav>
   </header>
 
-  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 88px 32px 0; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center;">
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 88px 32px 0; display: grid; grid-template-columns: 1.1fr 0.9fr;" data-r="stack gap: 56px; align-items: center;">
     <div style="animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
       <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 20px;">About us</div>
       <h1 style="font-size: clamp(42px, 4.8vw, 68px); line-height: 1.04; letter-spacing: -0.03em; margin: 0 0 22px;">Physical AI.<br><span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Built for manufacturing.</span></h1>
@@ -78,7 +100,7 @@
   <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 96px 32px 0;">
     <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">What we believe</div>
     <h2 style="font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.025em; max-width: 26ch; margin: 0 0 44px;">Intelligence belongs on the floor, not in a dashboard.</h2>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;">
+    <div data-r="two" style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;">
       <sc-for list="{{ beliefs }}" as="b" hint-placeholder-count="3">
         <div style="padding: 28px 26px 32px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
           <div style="font-family: var(--font-heading); font-size: 15px; letter-spacing: 0.02em; background-image: linear-gradient(96deg,#22d3ee,#3b82f6 45%,#e026c8); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 30px;">{{ b.num }}</div>
@@ -96,7 +118,7 @@
     </div>
   </section>
 
-  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 96px 32px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
+  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 96px 32px 0; display: grid; grid-template-columns: 1fr 1fr;" data-r="stack gap: 56px; align-items: start;">
     <div>
       <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">Where we are</div>
       <h2 style="font-size: clamp(26px, 2.7vw, 38px); line-height: 1.12; letter-spacing: -0.024em; margin: 0 0 18px; max-width: 22ch;">Deploying today. Signing robotics pilots now.</h2>
