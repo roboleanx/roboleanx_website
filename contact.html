@@ -276,9 +276,9 @@ class Component extends DCLogic {
     const ready = missing.length === 0;
     const t = s.touched;
     const copy = [
-      { msgLabel: "Which line should we demo against?", msgPlaceholder: "End-of-line inspection on welded brackets; two operators, 3% escape rate.", submitLabel: "Request demo" },
+      { msgLabel: "What industry or application should we focus on?", msgPlaceholder: "Electronics assembly, automotive inspection, packaging line, or another factory workflow.", submitLabel: "Request demo" },
       { msgLabel: "The workflow you want a robot to learn", msgPlaceholder: "Kitting six SKUs into trays; part position varies, changeover twice a shift.", submitLabel: "Apply for pilot" },
-      { msgLabel: "Where should Operator AI start?", msgPlaceholder: "Existing camera over final inspection; operators check surface defects and missing clips; want early access.", submitLabel: "Sign up for Operator AI" }
+      { msgLabel: "What job would you like to give your camera?", msgPlaceholder: "What should it watch for, and when should your team be alerted?", submitLabel: "Sign up for Operator AI" }
     ][s.intent];
     return {
       menuOpen: !!this.state.menu,
@@ -292,8 +292,8 @@ class Component extends DCLogic {
       notSent: !s.sent,
       isDemo: s.intent === 0,
       isPilot: s.intent === 1,
-      isGeneral: s.intent === 2,
-      isBusiness: s.intent !== 2,
+      isOperatorAi: s.intent === 2,
+      isBusiness: true,
       msgLabel: copy.msgLabel, msgPlaceholder: copy.msgPlaceholder, submitLabel: copy.submitLabel,
       name: s.name, company: s.company, email: s.email, message: s.message,
       setName: this.set("name"), setCompany: this.set("company"), setEmail: this.set("email"),
