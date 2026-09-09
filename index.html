@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RoboLeanX — AI operators and cognitive robots for the factory floor</title>
-<meta name="description" content="Give every factory camera a job and hand repetitive work to robots that learn by demonstration. Proven on your line in a four-week pilot.">
+<title>PerceptX — The physical AI intelligence platform for manufacturing</title>
+<meta name="description" content="One intelligence platform for physical AI. It sees the floor, reasons about the work, and acts on it — through vision AI and robotics running on the same layer.">
 <link rel="canonical" href="https://roboleanx.com/">
 <meta name="theme-color" content="#0a0c26">
 <link rel="icon" href="assets/logo-x.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="RoboLeanX">
-<meta property="og:title" content="RoboLeanX — AI operators and cognitive robots for the factory floor">
-<meta property="og:description" content="Give every factory camera a job and hand repetitive work to robots that learn by demonstration. Proven on your line in a four-week pilot.">
+<meta property="og:site_name" content="PerceptX">
+<meta property="og:title" content="PerceptX — The physical AI intelligence platform for manufacturing">
+<meta property="og:description" content="One intelligence platform for physical AI. It sees the floor, reasons about the work, and acts on it — through vision AI and robotics running on the same layer.">
 <meta property="og:url" content="https://roboleanx.com/">
 <meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -67,8 +67,7 @@
   [data-r~="navpanel"] { position: absolute !important; top: 100% !important; left: 0 !important; right: 0 !important; flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 8px 20px 20px !important; background: color-mix(in srgb, var(--color-bg) 96%, transparent) !important; backdrop-filter: blur(14px); border-bottom: 1px solid var(--color-divider) !important; }
   [data-r~="navlink"] { font-size: 16.5px !important; opacity: 1 !important; padding: 15px 2px !important; border-top: 1px solid var(--color-divider) !important; }
   [data-r~="panelcta"] { display: inline-flex !important; justify-content: center; margin-top: 18px !important; padding: 13px 20px !important; font-size: 14.5px !important; }
-  [data-r~="brand"] img { width: 46px !important; height: 46px !important; border-radius: 10px !important; }
-  [data-r~="brand"] span { font-size: 20px !important; }
+  [data-r~="brand"] img { width: 34px !important; height: 34px !important; border-radius: 8px !important; }
   header > nav { position: relative !important; gap: 13px !important; row-gap: 12px !important; padding-top: 12px !important; padding-bottom: 12px !important; }
 }
 @media (max-width: 620px) {
@@ -84,8 +83,11 @@
   <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--color-bg) 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
       <a href="#top" data-r="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
-        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 72px; height: 72px; border-radius: 14px;">
-        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.02em;">RoboLeanX</span>
+        <img src="assets/logo-x.png" alt="PerceptX" class="lighten" style="width: 40px; height: 40px; border-radius: 9px;">
+        <span style="display: flex; flex-direction: column; gap: 1px;">
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; line-height: 1.1;">PerceptX</span>
+          <span style="font-size: 10px; letter-spacing: 0.07em; color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap;">by RoboLeanX</span>
+        </span>
       </a>
       <button type="button" data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; cursor: pointer;">
         <span style="display: grid; gap: 5px; width: 20px;">
@@ -108,18 +110,27 @@
     <div style="animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
       <div style="display: inline-flex; align-items: center; gap: 9px; padding: 5px 12px 5px 8px; border: 1px solid var(--color-divider); border-radius: 999px; font-size: 11.5px; letter-spacing: 0.04em; white-space: nowrap; color: var(--color-neutral-300); margin-bottom: 26px;">
         <span style="width: 6px; height: 6px; border-radius: 50%; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); animation: pulseRing 2.4s ease-out infinite;"></span>
-        NVIDIA Inception Partner
+        Physical AI for manufacturing
       </div>
-      <h1 style="font-size: clamp(46px, 5.4vw, 76px); line-height: 1.02; letter-spacing: -0.032em; margin: 0 0 22px; text-wrap: balance;">
-        Factories that see.<br>
-        <span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Robots that think.</span>
+      <h1 style="font-size: clamp(54px, 6.6vw, 96px); line-height: 1.0; letter-spacing: -0.034em; margin: 0 0 24px; text-wrap: balance;">
+        Embodied AI,<br>
+        <span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">built to work.</span>
       </h1>
-      <p style="font-size: 17.5px; line-height: 1.6; max-width: 46ch; color: color-mix(in srgb, var(--color-text) 74%, transparent); margin: 0 0 32px;">
-        Embodied intelligence for the modern factory. Robots taught by demonstration. Cameras that work like operators.
+      <p style="font-size: 19.5px; line-height: 1.55; max-width: 50ch; color: color-mix(in srgb, var(--color-text) 74%, transparent); margin: 0 0 32px;">
+        PerceptX is the intelligence layer behind physical machines — giving them the ability to perceive, reason, and act on the factory floor.
       </p>
+      <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 42%, transparent); margin-bottom: 12px;">Two ways it reaches the floor</div>
+      <div data-r="two" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; max-width: 620px; margin-bottom: 32px;">
+        <sc-for list="{{ modalities }}" as="m" hint-placeholder-count="2">
+          <a href="{{ m.href }}" style="display: block; text-decoration: none; color: inherit; padding: 16px 18px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-text) 4%, transparent); transition: border-color 0.35s, transform 0.35s cubic-bezier(0.2,0.7,0.2,1);" style-hover="border-color: color-mix(in srgb, #38b6f0 60%, transparent); transform: translateY(-3px);">
+            <div style="font-family: var(--font-heading); font-size: 17px; letter-spacing: -0.015em; margin-bottom: 6px;">{{ m.name }}</div>
+            <div style="font-size: 13.5px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 66%, transparent);">{{ m.body }}</div>
+          </a>
+        </sc-for>
+      </div>
       <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px;">
         <a href="contact.html#demo" class="btn" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Request private demo</a>
-        <a href="contact.html#pilot" class="btn btn-secondary" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px;">Apply for robotics pilot</a>
+        <a href="#platform" class="btn btn-secondary" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px;">See how the platform works</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 4px; max-width: 460px;">
         <sc-for list="{{ heroStats }}" as="stat" hint-placeholder-count="3">
@@ -133,14 +144,15 @@
 
     <div style="position: relative; width: 100%; animation: revealUp 0.9s 0.12s cubic-bezier(0.2,0.7,0.2,1) both;">
       <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 10px; box-shadow: var(--shadow-md);">
-        <video ref="{{ videoRef }}" src="assets/vision-operator-loop.mp4" autoPlay="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsInline="{{ true }}" preload="metadata" style="display: block; width: 100%; height: auto; border-radius: var(--radius-sm);"></video>
+        <iframe src="https://player.vimeo.com/video/1223043005?h=9174ca2405&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;dnt=1" title="PerceptX physical AI platform demo" allow="autoplay; fullscreen; picture-in-picture" loading="eager" referrerpolicy="strict-origin-when-cross-origin" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm);" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
   <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 96px 32px 0; animation: revealUp 0.8s linear both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
     <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">What we do</div>
-    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 24ch; margin: 0 0 44px;">Machines that understand the work.</h2>
+    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 26ch; margin: 0 0 20px;">One intelligence, two ways to put it on the floor.</h2>
+    <p style="font-size: 16px; line-height: 1.65; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 44px;">Perception, reasoning, and action are the platform. Vision and robotics are simply where that intelligence meets the physical work.</p>
     <div data-r="stack" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;">
       <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="2">
         <div style="position: relative; padding: 30px 30px 34px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 55%, var(--color-bg))); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
@@ -194,8 +206,8 @@
   <section id="solutions" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
     <div style="max-width: 560px; margin-bottom: 40px;">
       <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">Solutions</div>
-      <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 14px;">Which one fits your floor?</h2>
-      <p style="font-size: 16px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0;">Start where the constraint is. Both run on the same perception and reasoning layer, so the second one is never a rebuild.</p>
+      <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 14px;">Where do you want to start?</h2>
+      <p style="font-size: 16px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0;">Start where the constraint is. Because both run on the same platform, adding the second one later is a configuration, not a rebuild.</p>
     </div>
 
     <div data-r="stack" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px;">
@@ -223,7 +235,7 @@
 
   <section id="demo" style="position: relative; z-index: 1; margin: 110px 0 0; padding: 96px 32px; background: radial-gradient(620px 300px at 22% 0%, rgba(34,211,238,0.22), transparent 70%), radial-gradient(620px 320px at 80% 10%, rgba(224,38,200,0.20), transparent 70%), radial-gradient(900px 420px at 50% 0%, var(--color-section-glow), var(--color-section) 72%); text-align: center; overflow: hidden;">
     <div style="max-width: 780px; margin: 0 auto;">
-      <h2 style="font-size: clamp(32px, 3.6vw, 50px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 14px;">The factory workforce is becoming <span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">intelligent</span>.</h2>
+      <h2 style="font-size: clamp(32px, 3.6vw, 50px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 14px;"><span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Intelligence</span> is joining the workforce.</h2>
       <p style="font-size: 18px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent); margin: 0 0 32px;">Join the companies building it first.</p>
       <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
         <a href="contact.html#demo" class="btn" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#141a4a,#141a4a), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Request private demo</a>
@@ -242,14 +254,15 @@
     </div>
     <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
       <div>
-        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX LLC</div>
+        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">PerceptX</div>
+        <div style="margin-bottom: 8px;">A product of RoboLeanX LLC</div>
         <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
       </div>
       <div>
         <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
         <a href="mailto:info@roboleanx.com">info@roboleanx.com</a>
       </div>
-      <div style="align-self: flex-end;">© 2026 RoboLeanX. All rights reserved.</div>
+      <div style="align-self: flex-end;">© 2026 RoboLeanX LLC. All rights reserved.</div>
     </div>
   </footer>
 </div>
@@ -259,20 +272,7 @@
 class Component extends DCLogic {
   state = { menu: false, layer: 0, sol: 0, clock: "" };
 
-  video = React.createRef();
-
-  playVideo() {
-    const el = this.video.current;
-    if (!el) return;
-    el.muted = true;
-    const p = el.play();
-    if (p && p.catch) p.catch(() => {});
-  }
-
-  componentDidUpdate() { this.playVideo(); }
-
   componentDidMount() {
-    this.playVideo();
     this.tick();
     this.clockId = setInterval(() => this.tick(), 1000);
     if (this.props.autoRotate !== false) {
@@ -305,12 +305,12 @@ class Component extends DCLogic {
 
   solutionCardData() {
     return [
-      { kicker: "Vision AI Operators", title: "Put a shift lead behind every camera.",
+      { kicker: "Platform · Vision AI", title: "Put a shift lead behind every camera.",
         body: "For floors where the problem is what nobody saw in time — defects, stoppages, risky moments.",
         points: ["Runs on the cameras you already have", "Checks assigned in plain English", "Alerts with clips, not dashboards to watch"],
         cta: "See how vision works", href: "solutions.html?p=vision",
         image: "assets/vision-operator-ui.png", alt: "Vision AI Operator monitoring line 2 for downtime" },
-      { kicker: "Cognitive Robotics", title: "Hand the repetitive work to a robot that learns it.",
+      { kicker: "Platform · Robotics AI", title: "Hand the repetitive work to a robot that learns it.",
         body: "For floors where the problem is labor — variable, repetitive tasks nobody wants to staff twice.",
         points: ["Taught by demonstration, not code", "Holds up as parts and conditions drift", "Proven on your workflow in a four-week pilot"],
         cta: "See how robotics works", href: "solutions.html?p=robotics",
@@ -349,27 +349,30 @@ class Component extends DCLogic {
       burgerMid: this.menuBar(0, 0) + ";opacity:" + (this.state.menu ? 0 : 1),
       burgerBot: this.menuBar(this.state.menu ? -45 : 0, this.state.menu ? -7 : 0),
       panelStyle: ["display:flex", "align-items:center", "gap:22px", "z-index:39"].join(";"),
-      videoRef: this.video,
       clock: this.state.clock,
       layers,
       activeLayer: this.layerData()[li],
       solutionCards: this.solutionCardData(),
+      modalities: [
+        { name: "Vision AI", body: "Every camera becomes an operator that understands the work in front of it.", href: "solutions.html?p=vision" },
+        { name: "Robotics AI", body: "The same intelligence picks up the tools and executes the task itself.", href: "solutions.html?p=robotics" }
+      ],
       heroStats: [
+        { value: "1", label: "Platform, one intelligence" },
         { value: "4 wks", label: "To a proven pilot" },
-        { value: "0", label: "Lines of robot code" },
-        { value: "24/7", label: "Operator coverage" }
+        { value: "24/7", label: "Autonomous coverage" }
       ],
       tickerItems: (() => {
         const base = ["Quality inspection", "Safety intelligence", "Downtime detection", "Learning by demonstration", "Machine tending", "Kitting & binning", "Exception alerts", "Embodied AI"];
         return base.concat(base);
       })(),
       pillars: [
-        { kicker: "Cognitive Robotics", title: "AI robots taught by demonstration.",
-          body: "Robots that learn real factory tasks from demonstrations, without fragile programming.",
-          tags: ["Assembly", "Kitting", "Machine tending"] },
-        { kicker: "Vision AI Operators", title: "Cameras with work to do.",
-          body: "Monitor quality, safety, and operations. Assign checks to your standards in plain English.",
-          tags: ["Quality", "Safety", "Operations"] }
+        { kicker: "One platform, applied through cameras", title: "Vision AI: understand the work.",
+          body: "The platform watches quality, safety, and operations through the cameras you already have. Checks are assigned to your standards in plain English.",
+          tags: ["Quality", "Safety", "Operations"] },
+        { kicker: "One platform, applied through machines", title: "Robotics AI: perform the work.",
+          body: "The same intelligence drives robots that learn real factory tasks by demonstration, without fragile programming.",
+          tags: ["Assembly", "Kitting", "Machine tending"] }
       ],
       receipts: [
         { metric: "4 wks", title: "Demonstration to running workflow", body: "On-site pilots go from first demonstration to a robot executing the real task inside four weeks.", source: "Trailblazer pilot path" },

@@ -62,8 +62,7 @@
   [data-r~="navpanel"] { position: absolute !important; top: 100% !important; left: 0 !important; right: 0 !important; flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 8px 20px 20px !important; background: color-mix(in srgb, var(--color-bg) 96%, transparent) !important; backdrop-filter: blur(14px); border-bottom: 1px solid var(--color-divider) !important; }
   [data-r~="navlink"] { font-size: 16.5px !important; opacity: 1 !important; padding: 15px 2px !important; border-top: 1px solid var(--color-divider) !important; }
   [data-r~="panelcta"] { display: inline-flex !important; justify-content: center; margin-top: 18px !important; padding: 13px 20px !important; font-size: 14.5px !important; }
-  [data-r~="brand"] img { width: 46px !important; height: 46px !important; border-radius: 10px !important; }
-  [data-r~="brand"] span { font-size: 20px !important; }
+  [data-r~="brand"] img { width: 34px !important; height: 34px !important; border-radius: 8px !important; }
   header > nav { position: relative !important; gap: 13px !important; row-gap: 12px !important; padding-top: 12px !important; padding-bottom: 12px !important; }
 }
 @media (max-width: 620px) {
@@ -79,8 +78,11 @@
   <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, #0a0c26 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
       <a href="index.html" data-r="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
-        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 72px; height: 72px; border-radius: 14px;">
-        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.02em;">RoboLeanX</span>
+        <img src="assets/logo-x.png" alt="PerceptX" class="lighten" style="width: 40px; height: 40px; border-radius: 9px;">
+        <span style="display: flex; flex-direction: column; gap: 1px;">
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; line-height: 1.1;">PerceptX</span>
+          <span style="font-size: 10px; letter-spacing: 0.07em; color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap;">by RoboLeanX</span>
+        </span>
       </a>
       <button type="button" data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; cursor: pointer;">
         <span style="display: grid; gap: 5px; width: 20px;">
@@ -175,14 +177,15 @@
     </div>
     <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
       <div>
-        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX LLC</div>
+        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">PerceptX</div>
+        <div style="margin-bottom: 8px;">A product of RoboLeanX LLC</div>
         <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
       </div>
       <div>
         <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
         <a href="mailto:info@roboleanx.com">info@roboleanx.com</a>
       </div>
-      <div style="align-self: flex-end;">© 2026 RoboLeanX. All rights reserved.</div>
+      <div style="align-self: flex-end;">© 2026 RoboLeanX LLC. All rights reserved.</div>
     </div>
   </footer>
 </div>

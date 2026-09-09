@@ -64,8 +64,7 @@
   [data-r~="navpanel"] { position: absolute !important; top: 100% !important; left: 0 !important; right: 0 !important; flex-direction: column !important; align-items: stretch !important; gap: 0 !important; padding: 8px 20px 20px !important; background: color-mix(in srgb, var(--color-bg) 96%, transparent) !important; backdrop-filter: blur(14px); border-bottom: 1px solid var(--color-divider) !important; }
   [data-r~="navlink"] { font-size: 16.5px !important; opacity: 1 !important; padding: 15px 2px !important; border-top: 1px solid var(--color-divider) !important; }
   [data-r~="panelcta"] { display: inline-flex !important; justify-content: center; margin-top: 18px !important; padding: 13px 20px !important; font-size: 14.5px !important; }
-  [data-r~="brand"] img { width: 46px !important; height: 46px !important; border-radius: 10px !important; }
-  [data-r~="brand"] span { font-size: 20px !important; }
+  [data-r~="brand"] img { width: 34px !important; height: 34px !important; border-radius: 8px !important; }
   header > nav { position: relative !important; gap: 13px !important; row-gap: 12px !important; padding-top: 12px !important; padding-bottom: 12px !important; }
 }
 @media (max-width: 620px) {
@@ -81,8 +80,11 @@
   <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, #0a0c26 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
       <a href="index.html" data-r="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
-        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 72px; height: 72px; border-radius: 14px;">
-        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 27px; letter-spacing: -0.02em;">RoboLeanX</span>
+        <img src="assets/logo-x.png" alt="PerceptX" class="lighten" style="width: 40px; height: 40px; border-radius: 9px;">
+        <span style="display: flex; flex-direction: column; gap: 1px;">
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; line-height: 1.1;">PerceptX</span>
+          <span style="font-size: 10px; letter-spacing: 0.07em; color: color-mix(in srgb, var(--color-text) 50%, transparent); white-space: nowrap;">by RoboLeanX</span>
+        </span>
       </a>
       <button type="button" data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; cursor: pointer;">
         <span style="display: grid; gap: 5px; width: 20px;">
@@ -126,7 +128,7 @@
           <a href="contact.html#operator-ai" class="btn" style="display: inline-flex; white-space: nowrap; padding: 11px 20px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Sign up for Operator AI</a>
         </div>
         <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 8px; box-shadow: var(--shadow-md);">
-          <video ref="{{ videoRef }}" src="assets/vision-operator-loop.mp4" autoPlay="{{ true }}" loop="{{ true }}" muted="{{ true }}" playsInline="{{ true }}" preload="metadata" style="display: block; width: 100%; height: auto; border-radius: var(--radius-sm);"></video>
+          <iframe src="https://player.vimeo.com/video/1223043005?h=9174ca2405&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;dnt=1" title="PerceptX Vision AI Operator demo" allow="autoplay; fullscreen; picture-in-picture" loading="eager" referrerpolicy="strict-origin-when-cross-origin" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm);" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -161,7 +163,7 @@
       <div data-r="stack" style="display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 48px; align-items: center;">
         <div>
           <h2 style="font-size: clamp(28px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.026em; margin: 0 0 16px; max-width: 22ch;">Robots taught by demonstration, not programming.</h2>
-          <p style="font-size: 16.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 44ch; margin: 0 0 26px;">RoboLeanX gives robots the intelligence to see, reason, and act in real production settings — then self-adapt as parts and conditions drift.</p>
+          <p style="font-size: 16.5px; line-height: 1.62; color: color-mix(in srgb, var(--color-text) 70%, transparent); max-width: 44ch; margin: 0 0 26px;">PerceptX gives robots the intelligence to see, reason, and act in real production settings — then self-adapt as parts and conditions drift.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 22px;">
             <span class="tag tag-outline">Assembly</span>
             <span class="tag tag-neutral">Kitting</span>
@@ -250,14 +252,15 @@
     </div>
     <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
       <div>
-        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX LLC</div>
+        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">PerceptX</div>
+        <div style="margin-bottom: 8px;">A product of RoboLeanX LLC</div>
         <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
       </div>
       <div>
         <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
         <a href="mailto:info@roboleanx.com">info@roboleanx.com</a>
       </div>
-      <div style="align-self: flex-end;">© 2026 RoboLeanX. All rights reserved.</div>
+      <div style="align-self: flex-end;">© 2026 RoboLeanX LLC. All rights reserved.</div>
     </div>
   </footer>
 </div>
@@ -267,22 +270,10 @@
 class Component extends DCLogic {
   state = { menu: false, tab: 0 };
 
-  video = React.createRef();
-
-  playVideo() {
-    const el = this.video.current;
-    if (!el) return;
-    el.muted = true;
-    const p = el.play();
-    if (p && p.catch) p.catch(() => {});
-  }
-
   componentDidMount() {
     const p = new URLSearchParams(location.search).get("p");
     if (p === "robotics") this.setState({ tab: 1 });
-    this.playVideo();
   }
-  componentDidUpdate() { if (this.state.tab === 0) this.playVideo(); }
 
   menuBar(rot, y) {
     return ["display:block", "height:2px", "border-radius:2px", "background:var(--color-text)",
@@ -301,7 +292,6 @@ class Component extends DCLogic {
       burgerMid: this.menuBar(0, 0) + ";opacity:" + (this.state.menu ? 0 : 1),
       burgerBot: this.menuBar(this.state.menu ? -45 : 0, this.state.menu ? -7 : 0),
       panelStyle: ["display:flex", "align-items:center", "gap:22px", "z-index:39"].join(";"),
-      videoRef: this.video,
       isVision: t === 0,
       isRobotics: t === 1,
       ctaHeadline: t === 0 ? "Ready to give your cameras a job?" : "Ready to test robotic execution on your workflow?",
