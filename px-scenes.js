@@ -542,7 +542,7 @@
           CAM_ICON(40, 95) + CAM_ICON(40, 145) + CAM_ICON(40, 195) +
           '<path d="M80 95 H140 V145 H206 M80 145 H206 M80 195 H140 V145" class="flow"/>' +
           '<rect x="206" y="104" width="190" height="82" rx="12" class="core"/>' +
-          '<text x="301" y="138" class="core-t">PerceptX edge</text><text x="301" y="160" class="core-s">VLA model \u00b7 on site</text>' +
+          '<text x="301" y="138" class="core-t">PerceptX edge</text><text x="301" y="160" class="core-s">VLM \u00b7 on site</text>' +
           '<path d="M396 145 H440 V95 H470 M440 145 H470 M440 145 V195 H470" class="flow"/>' +
           SYSTEMS();
       }
@@ -557,7 +557,7 @@
           '<path d="M80 95 H130 V145 H250 M80 145 H130 M80 195 H130 V145" class="flow"/>' +
           '<g transform="translate(224 145)" aria-hidden="true"><rect x="-11" y="-11" width="22" height="22" rx="6" class="node"/><rect x="-5" y="-2" width="10" height="7" rx="1.5" class="dot"/><path d="M-3 -2 v-2.5 a3 3 0 0 1 6 0 v2.5" class="lock"/></g>' +
           '<rect x="250" y="104" width="170" height="82" rx="41" class="core"/>' +
-          '<text x="335" y="138" class="core-t">PerceptX cloud</text><text x="335" y="160" class="core-s">VLA model \u00b7 managed</text>' +
+          '<text x="335" y="138" class="core-t">PerceptX cloud</text><text x="335" y="160" class="core-s">VLM \u00b7 managed</text>' +
           '<path d="M420 145 H440 V95 H470 M440 145 H470 M440 145 V195 H470" class="flow"/>' +
           SYSTEMS();
       }

@@ -13,7 +13,7 @@
 <meta property="og:title" content="PerceptX — Vision AI agents for industrial operations | A RoboLeanX brand">
 <meta property="og:description" content="Turn cameras into AI agents that watch, catch problems, and start the fix, all with a prompt.">
 <meta property="og:url" content="https://roboleanx.com/">
-<meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
+<meta property="og:image" content="https://roboleanx.com/assets/og-perceptx.png">
 <meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
@@ -28,8 +28,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="perceptx.css">
 <style>
-  .flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
-  .flow li { position: relative; display: grid; justify-items: start; gap: 10px; padding: 26px 24px 28px; border-radius: 14px; background: var(--color-surface); box-shadow: var(--shadow-sm); }
+  .flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .flow li { position: relative; display: grid; justify-items: start; align-content: start; gap: 10px; padding: 26px 24px 28px; border-radius: 14px; background: var(--color-surface); box-shadow: var(--shadow-sm); }
   .flow li + li::before { content: "→"; position: absolute; left: -15px; top: 50%; transform: translateY(-50%); font-size: 14px; color: var(--color-accent-800); }
   .flow li.flow-lit { background: linear-gradient(170deg, color-mix(in srgb, var(--glow) 16%, var(--color-surface)), var(--color-surface) 70%);
     box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 70%, transparent), 0 0 30px 0 color-mix(in srgb, var(--glow) 30%, transparent), 0 0 110px 10px color-mix(in srgb, var(--glow) 14%, transparent); }
@@ -54,9 +54,8 @@
   .impact strong { font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.05; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
   .impact li > span:last-child { font-size: 14.5px; color: color-mix(in srgb, var(--color-text) 66%, transparent); }
   .impact sup { font-size: 0.42em; font-weight: 500; vertical-align: super; margin-left: 1px; color: color-mix(in srgb, var(--color-text) 45%, transparent); }
-  @media (max-width: 900px) { .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .flow li + li::before { display: none; } }
+  @media (max-width: 760px) { .flow { grid-template-columns: minmax(0, 1fr); } .flow li + li::before { display: none; } }
   @media (max-width: 620px) { .impact ul { grid-template-columns: minmax(0, 1fr); } .impact li + li { border-left: 0; border-top: 1px solid var(--color-divider); padding-top: 18px; margin-top: 10px; } }
-  @media (max-width: 520px) { .flow { grid-template-columns: minmax(0, 1fr); } }
   .hero-horizon { position: relative; width: 100%; height: 0; }
   .horizon-clip { position: absolute; left: 50%; top: -800px; width: 100vw; height: 1480px; transform: translateX(-50%); overflow: hidden; pointer-events: none; }
   .horizon { position: absolute; left: 50%; top: 630px; transform: translateX(-50%); width: max(2200px, 170vw); height: 1500px; border-radius: 50%; pointer-events: none;
@@ -154,12 +153,11 @@
 
   <section id="platform" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
     <div class="eyebrow" style="margin-bottom: 18px;">How it works</div>
-    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 40px;">From camera to agent in four steps.</h2>
+    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 40px;">From camera to agent in three steps.</h2>
     <ol class="flow">
       <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3"/></svg></span><span class="flow-n">01</span><strong>Connect a camera</strong></li>
       <li class="flow-lit"><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="flow-n">02</span><strong>Describe the task in English</strong></li>
-      <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="flow-n">03</span><strong>It catches the moment</strong></li>
-      <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="flow-n">04</span><strong>It automates your workflow</strong></li>
+      <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="flow-n">03</span><strong>It catches the problem and starts the fix</strong></li>
     </ol>
   </section>
 
@@ -186,8 +184,8 @@
         </div>
         <div class="deploy-point">
           <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span>
-          <strong>Proprietary VLA model</strong>
-          <span>Our own vision-language-action model, built for edge inference. It sees, reasons and acts right next to the camera.</span>
+          <strong>Proprietary VLM</strong>
+          <span>Our proprietary vision-language model, built for edge inference. It sees, reasons and acts right next to the camera.</span>
         </div>
       </div>
     </div>
