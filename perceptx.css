@@ -1,0 +1,56 @@
+/* PerceptX theme, shared by every page. Tokens follow sevendegrees.ai: a warm near-black ground,
+   off-white type, and champagne used as light (glows, labels, emphasis) rather than paint. */
+:root {
+  color-scheme: dark;
+  /* 7° ground: the near-black of the mark, warmed a half-step so the glow sits in it.
+     The accent is horizon light, not a brand colour: champagne for glows, labels and emphasis. */
+  --font-heading: "Archivo", system-ui, sans-serif;
+  --font-body: "Archivo", system-ui, sans-serif;
+  --font-heading-weight: 700;
+  --color-bg: #09090a;
+  --color-surface: #121211;
+  --color-text: #f4f1ec;
+  --color-ink: #f4f1ec;
+  --color-paper: #09090a;
+  --color-accent: #f0c48a;
+  --color-accent-100: #fdf4e8;
+  --color-accent-200: #f9e6cd;
+  --color-accent-300: #f5d6ae;
+  --color-accent-400: #f0c48a;
+  --color-accent-500: #e2a862;
+  --color-accent-600: #f6d7ab;
+  --color-accent-700: #cfa470;
+  --color-accent-800: #f0c48a;
+  --color-accent-900: #0d0b09;
+  --glow: #f7d7a8;
+  --color-divider: color-mix(in srgb, #f4f1ec 16%, transparent);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.55);
+  --shadow-md: 0 8px 28px rgba(0,0,0,0.6);
+  --shadow-lg: 0 24px 64px rgba(0,0,0,0.7);
+}
+html { scroll-behavior: smooth; }
+body { background: #09090a; }
+body { margin: 0; overflow-x: hidden; text-wrap: pretty; }
+::selection { background: color-mix(in srgb, var(--glow) 55%, transparent); }
+.logo-mark { display: block; flex: none; background: var(--color-text); mask: url(assets/logo-x-mono.png) center / contain no-repeat; mask-mode: luminance; }
+.btn-paper { color: #0d0b09 !important; background: #f4f1ec; border: 1px solid #f4f1ec; }
+.btn-paper:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 70%, transparent), 0 10px 34px -4px color-mix(in srgb, var(--glow) 85%, transparent); }
+.btn { border-radius: 8px; transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+.btn:hover { transform: translateY(-1px); }
+.btn-ink { color: var(--color-paper) !important; background: var(--color-ink); border: 1px solid var(--color-ink); box-shadow: 0 0 0 0 transparent; }
+.btn-ink:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 60%, transparent), 0 8px 28px -4px color-mix(in srgb, var(--glow) 75%, transparent); }
+.tag-neutral { background: color-mix(in srgb, var(--color-text) 6%, transparent); color: color-mix(in srgb, var(--color-text) 78%, transparent); }
+.eyebrow { font-size: 12px !important; letter-spacing: 0.22em !important; font-weight: 600; color: var(--color-accent-800); text-transform: uppercase; width: fit-content; }
+.glow-card { border-color: color-mix(in srgb, var(--glow) 70%, transparent) !important; background: var(--color-surface);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 22%, transparent), 0 0 30px 0 color-mix(in srgb, var(--glow) 28%, transparent), 0 0 110px 10px color-mix(in srgb, var(--glow) 14%, transparent); }
+.glow-card:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 40%, transparent), 0 0 38px 2px color-mix(in srgb, var(--glow) 40%, transparent), 0 0 130px 18px color-mix(in srgb, var(--glow) 18%, transparent), 0 24px 50px -10px color-mix(in srgb, #3a2a14 22%, transparent) !important; }
+.dark-band { --color-text: #f4f1ec; --color-divider: color-mix(in srgb, #f4f1ec 18%, transparent); color: var(--color-text); }
+.lockup { display: grid; gap: 4px; line-height: 1; }
+.lockup-name { font-family: var(--font-heading); font-weight: 800; font-size: 20px; letter-spacing: -0.03em; }
+.lockup-sub { font-size: 9.5px; font-weight: 600; letter-spacing: 0.17em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 55%, transparent); }
+@keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes driftGrid { from { transform: translateY(0); } to { transform: translateY(-40px); } }
+@keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(226,168,98,0.45); } 70% { box-shadow: 0 0 0 14px rgba(226,168,98,0); } 100% { box-shadow: 0 0 0 0 rgba(226,168,98,0); } }
