@@ -31,6 +31,9 @@
   .flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
   .flow li { position: relative; display: grid; justify-items: start; gap: 10px; padding: 26px 24px 28px; border-radius: 14px; background: var(--color-surface); box-shadow: var(--shadow-sm); }
   .flow li + li::before { content: "→"; position: absolute; left: -15px; top: 50%; transform: translateY(-50%); font-size: 14px; color: var(--color-accent-800); }
+  .flow li.flow-lit { background: linear-gradient(170deg, color-mix(in srgb, var(--glow) 16%, var(--color-surface)), var(--color-surface) 70%);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 70%, transparent), 0 0 30px 0 color-mix(in srgb, var(--glow) 30%, transparent), 0 0 110px 10px color-mix(in srgb, var(--glow) 14%, transparent); }
+  .flow li.flow-lit .flow-n { color: var(--color-accent-800); }
   .flow-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; margin-bottom: 8px; background: color-mix(in srgb, var(--glow) 22%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 70%, transparent), 0 0 24px color-mix(in srgb, var(--glow) 45%, transparent); }
   .flow-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--color-accent-800); stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
   .flow-n { font: 500 11px/1 'Geist Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.08em; color: color-mix(in srgb, var(--color-text) 45%, transparent); }
@@ -128,7 +131,7 @@
       </p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
         <a href="contact.html#demo" class="btn btn-ink" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px; ">Request private demo</a>
-        <a href="#platform" class="btn btn-secondary" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px;">See how PerceptX works</a>
+        <a href="#video" class="btn btn-secondary" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px;">See how PerceptX works</a>
       </div>
     </div>
 
@@ -143,23 +146,29 @@
     </ul>
   </section>
 
-  <section id="agents" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 40px 32px 0;">
-    <div class="eyebrow" style="margin-bottom: 18px;">Where it works</div>
-    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 16px;">Vision agents for every floor.</h2>
-    <p style="font-size: 16px; line-height: 1.65; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 32px;">Every floor asks the same three questions. Pick one to see the agents that answer it, industry by industry.</p>
-    <px-verticals></px-verticals>
+  <section id="video" aria-label="Product video" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 40px 32px 0;">
+    <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 10px; background: var(--color-surface); box-shadow: var(--shadow-md);">
+      <iframe src="https://player.vimeo.com/video/1223043005?h=9174ca2405&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;dnt=1" title="PerceptX vision AI agent demo" allow="autoplay; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm);"></iframe>
+    </div>
   </section>
-
 
   <section id="platform" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
     <div class="eyebrow" style="margin-bottom: 18px;">How it works</div>
     <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 40px;">From camera to agent in four steps.</h2>
     <ol class="flow">
       <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3"/></svg></span><span class="flow-n">01</span><strong>Connect a camera</strong></li>
-      <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="flow-n">02</span><strong>Describe the agent</strong></li>
+      <li class="flow-lit"><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="flow-n">02</span><strong>Describe the task in English</strong></li>
       <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="flow-n">03</span><strong>It catches the moment</strong></li>
       <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="flow-n">04</span><strong>It automates your workflow</strong></li>
     </ol>
+  </section>
+
+
+  <section id="agents" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
+    <div class="eyebrow" style="margin-bottom: 18px;">Where it works</div>
+    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 16px;">Vision agents for every floor.</h2>
+    <p style="font-size: 16px; line-height: 1.65; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 32px;">Every floor asks the same three questions. Pick one to see the agents that answer it, industry by industry.</p>
+    <px-verticals></px-verticals>
   </section>
 
 

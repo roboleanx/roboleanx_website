@@ -440,7 +440,14 @@
         ".alertbox i { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex: none; background: color-mix(in srgb, var(--color-text) 25%, transparent); transition: background 0.3s, box-shadow 0.3s; }",
         ".alertbox.on { color: var(--color-text); border-color: color-mix(in srgb, #ef5a3c 45%, transparent); background: color-mix(in srgb, #ef5a3c 7%, transparent); }",
         ".alertbox.on i { background: #ef5a3c; box-shadow: 0 0 0 4px color-mix(in srgb, #ef5a3c 22%, transparent); }",
-        "@media (max-width: 900px) { .body { grid-template-columns: minmax(0, 1fr); padding: 22px 16px 24px; gap: 24px; } .demo { max-width: none; justify-self: stretch; } .tab { padding: 14px 12px; } .tq { font-size: 16px; white-space: normal; } }"
+        "@media (max-width: 900px) { .body { grid-template-columns: minmax(0, 1fr); padding: 18px 16px 22px; gap: 14px; } .demo { max-width: none; justify-self: stretch; } .tab { padding: 14px 12px; } .tq { font-size: 16px; } }",
+        /* Phones: industries become a swipeable chip strip so the scene sits right under whatever was tapped. */
+        "@media (max-width: 620px) { .tab { padding: 12px 10px; gap: 5px; } .tq { font-size: 14.5px; }" +
+          " .lead { font-size: 14.5px; margin: 0 0 12px; }" +
+          " .rows { position: relative; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px 2px; scroll-padding: 0 16px; }" +
+          " .rows::-webkit-scrollbar { display: none; }" +
+          " .row { flex: none; padding: 9px 14px 10px; border-radius: 999px; } .ind { font-size: 14px; white-space: nowrap; } .agent { display: none; } .bar { left: 14px; right: 14px; }" +
+          " .under { margin-top: 12px; } }"
       ].join("\n") + "</style>" +
         '<div class="card"><div class="tabs" role="tablist" aria-label="Questions"></div>' +
         '<div class="body"><div><div class="lead"></div><div class="rows" role="tablist" aria-label="Industries"></div></div>' +
@@ -479,6 +486,7 @@
         ag = j; lastKey = "";
         var a = LENSES[li].agents[j];
         rowBtns.forEach(function (b, k) { b.setAttribute("aria-selected", String(k === j)); b.tabIndex = k === j ? 0 : -1; rowBars[k].style.width = "0"; });
+        if (rowsEl.scrollWidth > rowsEl.clientWidth) rowsEl.scrollTo({ left: rowBtns[j].offsetLeft - 16, behavior: reduce ? "auto" : "smooth" });
         canvas.setAttribute("aria-label", a.industry + ", " + a.text + ": example scene");
         q(".cap .l").textContent = a.cam;
         q(".alert").textContent = a.alert;
