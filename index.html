@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RoboLeanX — The physical AI intelligence platform for manufacturing</title>
-<meta name="description" content="One intelligence platform for physical AI. It sees the floor, reasons about the work, and acts on it — through vision AI and robotics running on the same layer.">
+<title>PerceptX — Vision AI agents for industrial operations | A RoboLeanX brand</title>
+<meta name="description" content="Turn cameras into AI agents that watch, catch problems, and start the fix, all with a prompt.">
 <link rel="canonical" href="https://roboleanx.com/">
-<meta name="theme-color" content="#0a0c26">
-<link rel="icon" href="assets/logo-x.png">
+<meta name="theme-color" content="#09090a">
+<link rel="icon" href="assets/logo-x-mono.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="RoboLeanX">
-<meta property="og:title" content="RoboLeanX — The physical AI intelligence platform for manufacturing">
-<meta property="og:description" content="One intelligence platform for physical AI. It sees the floor, reasons about the work, and acts on it — through vision AI and robotics running on the same layer.">
+<meta property="og:site_name" content="PerceptX">
+<meta property="og:title" content="PerceptX — Vision AI agents for industrial operations | A RoboLeanX brand">
+<meta property="og:description" content="Turn cameras into AI agents that watch, catch problems, and start the fix, all with a prompt.">
 <meta property="og:url" content="https://roboleanx.com/">
-<meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
+<meta property="og:image" content="https://roboleanx.com/assets/og-perceptx.png">
 <meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
@@ -23,38 +23,49 @@
 <link rel="stylesheet" href="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/styles.css">
 <script src="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/_ds_bundle.js"></script>
 <script src="./image-slot.js"></script>
+<script src="./px-scenes.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="perceptx.css">
 <style>
-  :root {
-    --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
-    --font-heading-weight: 500;
-    --color-bg: #0a0c26;
-    --color-surface: #151a3a;
-    --color-accent: #38b6f0;
-    --color-accent-100: #ecfbff;
-    --color-accent-200: #cdf1fb;
-    --color-accent-300: #9fe4f7;
-    --color-accent-400: #6fd0f5;
-    --color-accent-500: #38b6f0;
-    --color-accent-600: #2b7fd4;
-    --color-accent-700: #24528f;
-    --color-accent-800: #1c2a63;
-    --color-accent-900: #131b46;
-    --color-section: #141a4a;
-    --color-section-glow: #23276b;
-    --color-divider: color-mix(in srgb, #cfe8ff 16%, transparent);
-    --logo-grad: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%);
-  }
-  html { scroll-behavior: smooth; }
-  body { background: #0a0c26; }
-  body { margin: 0; overflow-x: hidden; }
-  @keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  .flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .flow li { position: relative; display: grid; justify-items: start; align-content: start; gap: 10px; padding: 26px 24px 28px; border-radius: 14px; background: var(--color-surface); box-shadow: var(--shadow-sm); }
+  .flow li + li::before { content: "→"; position: absolute; left: -15px; top: 50%; transform: translateY(-50%); font-size: 14px; color: var(--color-accent-800); }
+  .flow li.flow-lit { background: linear-gradient(170deg, color-mix(in srgb, var(--glow) 16%, var(--color-surface)), var(--color-surface) 70%);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 70%, transparent), 0 0 30px 0 color-mix(in srgb, var(--glow) 30%, transparent), 0 0 110px 10px color-mix(in srgb, var(--glow) 14%, transparent); }
+  .flow li.flow-lit .flow-n { color: var(--color-accent-800); }
+  .flow-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; margin-bottom: 8px; background: color-mix(in srgb, var(--glow) 22%, transparent); box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 70%, transparent), 0 0 24px color-mix(in srgb, var(--glow) 45%, transparent); }
+  .flow-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--color-accent-800); stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
+  .flow-n { font: 500 11px/1 'Geist Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.08em; color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+  .flow strong { font-family: var(--font-heading); font-weight: 700; font-size: 19px; letter-spacing: -0.015em; }
+  .deploy-card { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: 44px; align-items: center; padding: 30px 32px; border-radius: 16px; border: 1px solid var(--color-divider); }
+  .deploy-points { display: grid; gap: 30px; }
+  .deploy-point { display: grid; gap: 8px; justify-items: start; }
+  .deploy-point .flow-icon { width: auto; height: auto; margin: 0 0 4px; background: none; box-shadow: none; }
+  .deploy-point .flow-icon svg { stroke: color-mix(in srgb, var(--color-text) 60%, transparent); }
+  .deploy-point strong { font-family: var(--font-heading); font-weight: 700; font-size: 17px; letter-spacing: -0.015em; }
+  .deploy-point span:last-child { font-size: 14.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 62%, transparent); }
+  @media (max-width: 900px) { .deploy-card { padding: 22px 18px; gap: 32px; } }
+  .impact { position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 0 32px 40px; text-align: center; }
+  .impact ul { list-style: none; margin: 0 auto; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 940px; }
+  .impact li { display: grid; gap: 6px; justify-items: center; padding: 8px 20px; }
+  .impact li + li { border-left: 1px solid var(--color-divider); }
+  .impact .upto { font: 500 11px/1 'Geist Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-800); }
+  .impact strong { font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 2.8vw, 40px); line-height: 1.05; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .impact li > span:last-child { font-size: 14.5px; color: color-mix(in srgb, var(--color-text) 66%, transparent); }
+  .impact sup { font-size: 0.42em; font-weight: 500; vertical-align: super; margin-left: 1px; color: color-mix(in srgb, var(--color-text) 45%, transparent); }
+  @media (max-width: 760px) { .flow { grid-template-columns: minmax(0, 1fr); } .flow li + li::before { display: none; } }
+  @media (max-width: 620px) { .impact ul { grid-template-columns: minmax(0, 1fr); } .impact li + li { border-left: 0; border-top: 1px solid var(--color-divider); padding-top: 18px; margin-top: 10px; } }
+  .hero-horizon { position: relative; width: 100%; height: 0; }
+  .horizon-clip { position: absolute; left: 50%; top: -800px; width: 100vw; height: 1480px; transform: translateX(-50%); overflow: hidden; pointer-events: none; }
+  .horizon { position: absolute; left: 50%; top: 630px; transform: translateX(-50%); width: max(2200px, 170vw); height: 1500px; border-radius: 50%; pointer-events: none;
+    background: var(--color-bg);
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--glow) 55%, transparent), 0 0 50px 1px color-mix(in srgb, var(--glow) 60%, transparent); }
+  .horizon::before { content: ""; position: absolute; inset: -260px -425px; border-radius: 50%; z-index: -1;
+    background: radial-gradient(closest-side, transparent 72%, color-mix(in srgb, var(--glow) 45%, transparent) 74.2%, color-mix(in srgb, var(--glow) 16%, transparent) 81%, color-mix(in srgb, var(--glow) 5%, transparent) 90%, transparent 100%); }
   @keyframes scanY { 0% { top: 4%; opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { top: 96%; opacity: 0; } }
   @keyframes boxPop { 0%, 12% { opacity: 0; transform: scale(0.96); } 20%, 80% { opacity: 1; transform: none; } 92%, 100% { opacity: 0; transform: scale(0.96); } }
-  @keyframes driftGrid { from { transform: translateY(0); } to { transform: translateY(-40px); } }
   @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(145,132,217,0.35); } 70% { box-shadow: 0 0 0 14px rgba(145,132,217,0); } 100% { box-shadow: 0 0 0 0 rgba(145,132,217,0); } }
 </style>
 <style>
 @media (max-width: 900px) {
@@ -78,13 +89,13 @@
 
 <div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
 
-  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(820px 560px at 80% -10%, rgba(34,211,238,0.13), transparent 70%), radial-gradient(760px 520px at 96% 34%, rgba(224,38,200,0.10), transparent 70%), radial-gradient(700px 500px at 4% 22%, rgba(59,130,246,0.14), transparent 70%);"></div>
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(900px 520px at 50% -18%, rgba(247,215,168,0.10), transparent 70%);"></div>
 
   <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--color-bg) 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
       <a href="#top" data-r="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
-        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 40px; height: 40px; border-radius: 9px;">
-        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; line-height: 1.1;">RoboLeanX</span>
+        <span class="logo-mark" role="img" aria-label="PerceptX" style="width: 38px; height: 38px;"></span>
+        <span class="lockup"><span class="lockup-name">PerceptX</span><span class="lockup-sub">A RoboLeanX brand</span></span>
       </a>
       <button type="button" data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; cursor: pointer;">
         <span style="display: grid; gap: 5px; width: 20px;">
@@ -95,168 +106,117 @@
       </button>
       <div data-r="navpanel" data-open="{{ menuOpen }}" onClick="{{ closeMenu }}" style="{{ panelStyle }}">
         <a href="#platform" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Platform</a>
-        <a href="solutions.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Solutions</a>
+        <a href="#agents" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Use cases</a>
         <a href="about.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">About</a>
         <a href="roi-calculator.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">ROI Calculator</a>
         <a href="contact.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Contact</a>
-        <a data-r="panelcta" href="contact.html#demo" class="btn" style="font-size: 13px; white-space: nowrap; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Book demo</a>
+        <a data-r="panelcta" href="contact.html#demo" class="btn btn-ink" style="font-size: 13px; white-space: nowrap; ">Book demo</a>
       </div>
     </nav>
   </header>
 
-  <section id="top" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 92px 32px 64px; display: flex; flex-direction: column; gap: 52px;">
-    <div style="animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
-      <div style="display: inline-flex; align-items: center; gap: 9px; padding: 5px 12px 5px 8px; border: 1px solid var(--color-divider); border-radius: 999px; font-size: 11.5px; letter-spacing: 0.04em; white-space: nowrap; color: var(--color-neutral-300); margin-bottom: 26px;">
-        <span style="width: 6px; height: 6px; border-radius: 50%; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); animation: pulseRing 2.4s ease-out infinite;"></span>
-        Physical AI for manufacturing
+  <section id="top" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 148px 32px 64px; display: flex; flex-direction: column; gap: 280px;">
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
+      <div style="display: inline-flex; align-items: center; gap: 9px; padding: 5px 12px 5px 8px; border: 1px solid var(--color-divider); border-radius: 999px; font-size: 11.5px; letter-spacing: 0.04em; white-space: nowrap; color: color-mix(in srgb, var(--color-text) 72%, transparent); background: color-mix(in srgb, var(--color-surface) 70%, transparent); margin-bottom: 26px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent-500); animation: pulseRing 2.4s ease-out infinite;"></span>
+        Vision AI for industrial
       </div>
-      <h1 style="font-size: clamp(54px, 6.6vw, 96px); line-height: 1.0; letter-spacing: -0.034em; margin: 0 0 24px; text-wrap: balance;">
-        Embodied AI,<br>
-        <span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">built to work.</span>
+      <h1 style="font-weight: 800; font-size: clamp(38px, 5.4vw, 78px); line-height: 1; letter-spacing: -0.03em; margin: 0 0 26px; text-wrap: balance;">
+        Vision AI That<br>
+        <span style="color: var(--color-accent-800);">Gets Work Done</span>
       </h1>
-      <p style="font-size: 19.5px; line-height: 1.55; max-width: 50ch; color: color-mix(in srgb, var(--color-text) 74%, transparent); margin: 0 0 32px;">
-        RoboLeanX is the intelligence layer behind physical machines — giving them the ability to perceive, reason, and act on the factory floor.
+      <p style="font-size: 17px; line-height: 1.6; max-width: 46ch; color: color-mix(in srgb, var(--color-text) 74%, transparent); margin: 0 0 34px;">
+        Turn cameras into AI agents that watch, catch problems, and start the fix, all with a prompt.
       </p>
-      <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 42%, transparent); margin-bottom: 12px;">Two ways it reaches the floor</div>
-      <div data-r="two" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; max-width: 620px; margin-bottom: 32px;">
-        <sc-for list="{{ modalities }}" as="m" hint-placeholder-count="2">
-          <a href="{{ m.href }}" style="display: block; text-decoration: none; color: inherit; padding: 16px 18px; border-radius: var(--radius-md); border: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-text) 4%, transparent); transition: border-color 0.35s, transform 0.35s cubic-bezier(0.2,0.7,0.2,1);" style-hover="border-color: color-mix(in srgb, #38b6f0 60%, transparent); transform: translateY(-3px);">
-            <div style="font-family: var(--font-heading); font-size: 17px; letter-spacing: -0.015em; margin-bottom: 6px;">{{ m.name }}</div>
-            <div style="font-size: 13.5px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 66%, transparent);">{{ m.body }}</div>
-          </a>
-        </sc-for>
-      </div>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px;">
-        <a href="contact.html#demo" class="btn" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Request private demo</a>
-        <a href="#platform" class="btn btn-secondary" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px;">See how the platform works</a>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 4px; max-width: 460px;">
-        <sc-for list="{{ heroStats }}" as="stat" hint-placeholder-count="3">
-          <div style="padding: 14px 16px 14px 0;">
-            <div style="font-family: var(--font-heading); font-size: 26px; letter-spacing: -0.02em; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content;">{{ stat.value }}</div>
-            <div style="font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 48%, transparent); margin-top: 4px;">{{ stat.label }}</div>
-          </div>
-        </sc-for>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <a href="contact.html#demo" class="btn btn-ink" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px; ">Request private demo</a>
+        <a href="#video" class="btn btn-secondary" style="white-space: nowrap; padding: 11px 20px; font-size: 14.5px;">See how PerceptX works</a>
       </div>
     </div>
 
-    <div style="position: relative; width: 100%; animation: revealUp 0.9s 0.12s cubic-bezier(0.2,0.7,0.2,1) both;">
-      <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 10px; box-shadow: var(--shadow-md);">
-        <iframe src="https://player.vimeo.com/video/1223043005?h=9174ca2405&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;dnt=1" title="RoboLeanX physical AI platform demo" allow="autoplay; fullscreen; picture-in-picture" loading="eager" referrerpolicy="strict-origin-when-cross-origin" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm);" allowfullscreen></iframe>
-      </div>
-    </div>
+    <div class="hero-horizon" aria-hidden="true"><div class="horizon-clip"><div class="horizon"></div></div></div>
   </section>
 
-  <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 96px 32px 0; animation: revealUp 0.8s linear both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
-    <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">What we do</div>
-    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 26ch; margin: 0 0 20px;">One intelligence, two ways to put it on the floor.</h2>
-    <p style="font-size: 16px; line-height: 1.65; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 44px;">Perception, reasoning, and action are the platform. Vision and robotics are simply where that intelligence meets the physical work.</p>
-    <div data-r="stack" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;">
-      <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="2">
-        <div style="position: relative; padding: 30px 30px 34px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 55%, var(--color-bg))); box-shadow: var(--shadow-sm); transition: transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="transform: translateY(-6px); box-shadow: var(--shadow-md);">
-          <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 40px;">{{ p.kicker }}</div>
-          <h3 style="font-size: 27px; letter-spacing: -0.02em; margin: 0 0 12px; max-width: 20ch;">{{ p.title }}</h3>
-          <p style="font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 68%, transparent); max-width: 40ch; margin: 0 0 22px;">{{ p.body }}</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-            <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="3">
-              <span class="tag tag-neutral">{{ t }}</span>
-            </sc-for>
-          </div>
-        </div>
-      </sc-for>
+  <section class="impact" aria-label="Impact">
+    <ul>
+      <li><span class="upto">Up to</span><strong>70%</strong><span>fewer safety incidents</span></li>
+      <li><span class="upto">Up to</span><strong>90%</strong><span>fewer defects reaching customers</span></li>
+      <li><span class="upto">Deploy in</span><strong>Minutes<sup>*</sup></strong><span>from prompt to live agent</span></li>
+    </ul>
+  </section>
+
+  <section id="video" aria-label="Product video" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 40px 32px 0;">
+    <div style="position: relative; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); padding: 10px; background: var(--color-surface); box-shadow: var(--shadow-md);">
+      <iframe src="https://player.vimeo.com/video/1223043005?h=9174ca2405&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0&amp;dnt=1" title="PerceptX vision AI agent demo" allow="autoplay; fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius-sm);"></iframe>
     </div>
   </section>
 
   <section id="platform" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
-    <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">Platform</div>
-    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 40px;">One intelligence layer for the factory floor.</h2>
-
-    <div data-r="stack" style="display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start;">
-      <div style="display: flex; flex-direction: column; gap: 2px;">
-        <sc-for list="{{ layers }}" as="l" hint-placeholder-count="3">
-          <button type="button" onClick="{{ l.select }}" style="{{ l.buttonStyle }}">
-            <span style="font-size: 11px; letter-spacing: 0.1em; color: color-mix(in srgb, var(--color-text) 45%, transparent); font-variant-numeric: tabular-nums;">{{ l.num }}</span>
-            <span style="font-family: var(--font-heading); font-size: 21px; letter-spacing: -0.015em;">{{ l.name }}</span>
-            <span style="margin-left: auto; font-size: 12px; opacity: 0.5;">→</span>
-          </button>
-        </sc-for>
-      </div>
-
-      <div style="position: relative; border-radius: var(--radius-lg); padding: 34px 36px 36px; background: linear-gradient(150deg, color-mix(in srgb, var(--color-accent-900) 55%, var(--color-surface)), var(--color-bg)); box-shadow: var(--shadow-sm); min-height: 290px;">
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-          <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--color-accent); animation: pulseRing 2.4s ease-out infinite;"></span>
-          <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300);">{{ activeLayer.name }}</span>
-        </div>
-        <h3 style="font-size: 28px; letter-spacing: -0.02em; margin: 0 0 14px; max-width: 26ch;">{{ activeLayer.headline }}</h3>
-        <p style="font-size: 16px; line-height: 1.65; max-width: 52ch; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 28px;">{{ activeLayer.body }}</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px;">
-          <sc-for list="{{ activeLayer.points }}" as="pt" hint-placeholder-count="4">
-            <div style="display: flex; align-items: flex-start; gap: 9px; padding: 12px 14px; border-radius: var(--radius-md); background: color-mix(in srgb, var(--color-text) 5%, transparent); font-size: 13.5px; line-height: 1.45;">
-              <span style="width: 5px; height: 5px; margin-top: 6px; border-radius: 50%; background: var(--color-accent); flex: none;"></span>
-              {{ pt }}
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
+    <div class="eyebrow" style="margin-bottom: 18px;">How it works</div>
+    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 40px;">From camera to agent in three steps.</h2>
+    <ol class="flow">
+      <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3"/></svg></span><span class="flow-n">01</span><strong>Connect a camera</strong></li>
+      <li class="flow-lit"><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><span class="flow-n">02</span><strong>Describe the task in English</strong></li>
+      <li><span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><span class="flow-n">03</span><strong>It catches the problem and starts the fix</strong></li>
+    </ol>
   </section>
 
-  <section id="solutions" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
-    <div style="max-width: 560px; margin-bottom: 40px;">
-      <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">Solutions</div>
-      <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 14px;">Where do you want to start?</h2>
-      <p style="font-size: 16px; line-height: 1.65; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0;">Start where the constraint is. Because both run on the same platform, adding the second one later is a configuration, not a rebuild.</p>
-    </div>
 
-    <div data-r="stack" style="display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px;">
-      <sc-for list="{{ solutionCards }}" as="c" hint-placeholder-count="0">
-        <a href="{{ c.href }}" style="display: block; text-decoration: none; color: inherit; padding: 10px 10px 34px; border-radius: var(--radius-lg); border: 1px solid var(--color-divider); transition: border-color 0.35s, transform 0.35s cubic-bezier(0.2,0.7,0.2,1), box-shadow 0.35s;" style-hover="border-color: color-mix(in srgb, #38b6f0 60%, transparent); transform: translateY(-6px); box-shadow: var(--shadow-md);">
-          <img src="{{ c.image }}" alt="{{ c.alt }}" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center; border-radius: var(--radius-md); margin-bottom: 28px;">
-          <div style="padding: 0 22px;">
-            <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 14px;">{{ c.kicker }}</div>
-            <h3 style="font-size: 26px; line-height: 1.15; letter-spacing: -0.022em; margin: 0 0 12px; max-width: 22ch;">{{ c.title }}</h3>
-            <p style="font-size: 15.5px; line-height: 1.6; color: color-mix(in srgb, var(--color-text) 68%, transparent); max-width: 40ch; margin: 0 0 22px;">{{ c.body }}</p>
-            <div style="display: grid; gap: 9px; margin-bottom: 26px;">
-              <sc-for list="{{ c.points }}" as="p" hint-placeholder-count="3">
-                <div style="display: grid; grid-template-columns: 16px 1fr; gap: 12px; align-items: baseline; font-size: 14px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 74%, transparent);">
-                  <span style="width: 6px; height: 6px; border-radius: 50%; background-image: linear-gradient(96deg,#22d3ee,#e026c8); transform: translateY(-2px);"></span>
-                  <span>{{ p }}</span>
-                </div>
-              </sc-for>
-            </div>
-            <span style="font-family: var(--font-heading); font-size: 13.5px; letter-spacing: 0.02em; color: var(--color-accent-100); border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 55%, transparent); padding-bottom: 3px;">{{ c.cta }}</span>
-          </div>
-        </a>
-      </sc-for>
+  <section id="agents" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
+    <div class="eyebrow" style="margin-bottom: 18px;">Where it works</div>
+    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 16px;">Vision agents for every floor.</h2>
+    <p style="font-size: 16px; line-height: 1.65; max-width: 58ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 32px;">Every floor asks the same three questions. Pick one to see the agents that answer it, industry by industry.</p>
+    <px-verticals></px-verticals>
+  </section>
+
+
+  <section id="deploy" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
+    <div class="eyebrow" style="margin-bottom: 18px;">Deployment</div>
+    <h2 style="font-size: clamp(30px, 3.2vw, 44px); line-height: 1.1; letter-spacing: -0.025em; max-width: 22ch; margin: 0 0 16px;">Your floor, your rules.</h2>
+    <p style="font-size: 16px; line-height: 1.65; max-width: 56ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 32px;">Run PerceptX on your own hardware inside the plant, or in the cloud. Same agents either way.</p>
+    <div data-r="stack" class="deploy-card">
+      <px-deploy></px-deploy>
+      <div class="deploy-points">
+        <div class="deploy-point">
+          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+          <strong>Deploys on-prem</strong>
+          <span>Run everything inside your plant network. Video never has to leave the building.</span>
+        </div>
+        <div class="deploy-point">
+          <span class="flow-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></span>
+          <strong>Proprietary VLM</strong>
+          <span>Our proprietary vision-language model, built for edge inference. It sees, reasons and acts right next to the camera.</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="roi" style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 110px 32px 0;">
     <div data-r="stack" style="display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 44px; align-items: center; padding: 46px 44px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, var(--color-bg))); box-shadow: var(--shadow-sm);">
       <div>
-        <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: var(--logo-grad); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 18px;">ROI calculator</div>
+        <div class="eyebrow" style="margin-bottom: 18px;">ROI calculator</div>
         <h2 style="font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.025em; margin: 0 0 16px; max-width: 22ch;">What is it costing you to not know yet?</h2>
-        <p style="font-size: 15.5px; line-height: 1.62; max-width: 46ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 28px;">Plug in your own defect rates, stoppages, and labor numbers — see the annual value of Vision AI catching failures, or of handing a task to a robot, in about a minute.</p>
-        <a href="roi-calculator.html" class="btn" style="display: inline-flex; white-space: nowrap; padding: 11px 20px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#151a3a,#151a3a), var(--logo-grad); background-origin: border-box; background-clip: padding-box, border-box;">Estimate your ROI</a>
+        <p style="font-size: 15.5px; line-height: 1.62; max-width: 46ch; color: color-mix(in srgb, var(--color-text) 68%, transparent); margin: 0 0 28px;">Plug in your own defect rates, stoppages and labor numbers, and see the annual value of catching failures as they happen. It takes about a minute.</p>
+        <a href="roi-calculator.html" class="btn btn-ink" style="display: inline-flex; white-space: nowrap; padding: 11px 20px; font-size: 14.5px; ">Estimate your ROI</a>
       </div>
       <div style="display: grid; gap: 2px;">
         <sc-for list="{{ roiPreview }}" as="r" hint-placeholder-count="3">
           <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 4px; border-top: 1px solid var(--color-divider);">
             <span style="font-size: 13.5px; color: color-mix(in srgb, var(--color-text) 68%, transparent);">{{ r.label }}</span>
-            <span style="font-family: var(--font-heading); font-size: 19px; letter-spacing: -0.01em; color: var(--color-accent-200); white-space: nowrap;">{{ r.value }}</span>
+            <span style="font-family: var(--font-heading); font-size: 19px; letter-spacing: -0.01em; font-weight: 700; color: var(--color-text); white-space: nowrap;">{{ r.value }}</span>
           </div>
         </sc-for>
       </div>
     </div>
   </section>
 
-  <section id="demo" style="position: relative; z-index: 1; margin: 110px 0 0; padding: 96px 32px; background: radial-gradient(620px 300px at 22% 0%, rgba(34,211,238,0.22), transparent 70%), radial-gradient(620px 320px at 80% 10%, rgba(224,38,200,0.20), transparent 70%), radial-gradient(900px 420px at 50% 0%, var(--color-section-glow), var(--color-section) 72%); text-align: center; overflow: hidden;">
+  <section id="demo" class="dark-band" style="position: relative; z-index: 1; margin: 110px 0 0; padding: 104px 32px; background: radial-gradient(760px 300px at 50% 118%, rgba(240,196,138,0.55), transparent 70%), radial-gradient(1200px 520px at 50% 130%, rgba(226,168,98,0.22), transparent 72%), var(--color-bg); border-top: 1px solid var(--color-divider); text-align: center; overflow: hidden;">
     <div style="max-width: 780px; margin: 0 auto;">
-      <h2 style="font-size: clamp(32px, 3.6vw, 50px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 14px;"><span style="background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">Intelligence</span> is joining the workforce.</h2>
-      <p style="font-size: 18px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent); margin: 0 0 32px;">Join the companies building it first.</p>
+      <h2 style="font-size: clamp(32px, 3.6vw, 50px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 14px;">Put an <span style="color: var(--glow);">agent</span> on every camera.</h2>
+      <p style="font-size: 18px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 76%, transparent); margin: 0 0 32px;">Join the teams putting PerceptX agents on the floor first.</p>
       <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-        <a href="contact.html#demo" class="btn" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#141a4a,#141a4a), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Request private demo</a>
-        <a href="contact.html#pilot" class="btn btn-secondary" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px;">Apply for robotics pilot</a>
+        <a href="contact.html#demo" class="btn btn-paper" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; ">Request private demo</a>
+        <a href="roi-calculator.html" class="btn btn-secondary" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px;">Estimate your ROI</a>
       </div>
     </div>
   </section>
@@ -265,14 +225,14 @@
     <div style="max-width: 1220px; margin: 0 auto; padding: 40px 32px 0; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
       <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent);">Programs &amp; partners</span>
       <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
-        <img src="assets/nvidia-inception.png" alt="NVIDIA Inception Program" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 12px 16px;">
-        <img src="assets/google-for-startups.png" alt="Google for Startups" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 16px 20px;">
+        <img src="assets/nvidia-inception.png" alt="NVIDIA Inception Program" style="height: 72px; width: auto; background: #f4f1ec; border-radius: var(--radius-md); padding: 12px 16px;">
+        <img src="assets/google-for-startups.png" alt="Google for Startups" style="height: 72px; width: auto; background: #f4f1ec; border-radius: var(--radius-md); padding: 16px 20px;">
       </div>
     </div>
     <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
       <div>
-        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX</div>
-        <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
+        <div class="lockup" style="color: var(--color-text); margin-bottom: 12px;"><span class="lockup-name" style="font-size: 17px;">PerceptX</span></div>
+        <div>RoboLeanX LLC<br>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
       </div>
       <div>
         <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
@@ -280,59 +240,14 @@
       </div>
       <div style="align-self: flex-end;">© 2026 RoboLeanX LLC. All rights reserved.</div>
     </div>
+    <p style="max-width: 1220px; margin: 0 auto; padding: 0 32px 36px; font-size: 12px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 48%, transparent);">* Deployment time applies to prompt-based agents. Results vary by use case.</p>
   </footer>
 </div>
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;autoRotate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
 class Component extends DCLogic {
-  state = { menu: false, layer: 0, sol: 0, clock: "" };
-
-  componentDidMount() {
-    this.tick();
-    this.clockId = setInterval(() => this.tick(), 1000);
-    if (this.props.autoRotate !== false) {
-      this.rotId = setInterval(() => {
-        if (!this.paused) this.setState(s => ({ layer: (s.layer + 1) % 3 }));
-      }, 4200);
-    }
-  }
-  componentWillUnmount() { clearInterval(this.clockId); clearInterval(this.rotId); }
-
-  tick() {
-    const d = new Date();
-    const p = n => String(n).padStart(2, "0");
-    this.setState({ clock: p(d.getHours()) + ":" + p(d.getMinutes()) + ":" + p(d.getSeconds()) });
-  }
-
-  layerData() {
-    return [
-      { name: "See", headline: "Perceive the floor in real time.",
-        body: "Parts, people, tools, motion, conditions, and exceptions — recognized continuously across every camera on the line.",
-        points: ["Part & assembly recognition", "Human and PPE awareness", "Motion and dwell tracking", "Condition & exception capture"] },
-      { name: "Reason", headline: "Understand context, not just pixels.",
-        body: "The layer holds workflow state: what step the line is on, what risk is present, and what should happen next.",
-        points: ["Workflow state modeling", "Risk and near-miss inference", "Standards set in plain English", "Root-cause correlation"] },
-      { name: "Act", headline: "Alert today, execute tomorrow.",
-        body: "Teams get the alert that matters now — and the same intelligence guides robotic execution as workflows move into physical action.",
-        points: ["Targeted team alerts", "Shift & line reporting", "Robot task handoff", "Closed-loop self-improvement"] }
-    ];
-  }
-
-  solutionCardData() {
-    return [
-      { kicker: "Platform · Vision AI", title: "Put a shift lead behind every camera.",
-        body: "For floors where the problem is what nobody saw in time — defects, stoppages, risky moments.",
-        points: ["Runs on the cameras you already have", "Checks assigned in plain English", "Alerts with clips, not dashboards to watch"],
-        cta: "See how vision works", href: "solutions.html?p=vision",
-        image: "assets/vision-operator-ui.png", alt: "Vision AI Operator monitoring line 2 for downtime" },
-      { kicker: "Platform · Robotics AI", title: "Hand the repetitive work to a robot that learns it.",
-        body: "For floors where the problem is labor — variable, repetitive tasks nobody wants to staff twice.",
-        points: ["Taught by demonstration, not code", "Holds up as parts and conditions drift", "Proven on your workflow in a four-week pilot"],
-        cta: "See how robotics works", href: "solutions.html?p=robotics",
-        image: "assets/robot-cell.png", alt: "Dual-arm robot cell handling a machined part" }
-    ];
-  }
+  state = { menu: false };
 
   menuBar(rot, y) {
     return ["display:block", "height:2px", "border-radius:2px", "background:var(--color-text)",
@@ -341,22 +256,6 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const li = this.state.layer;
-    const layers = this.layerData().map((l, i) => ({
-      num: "0" + (i + 1), name: l.name,
-      select: () => { this.paused = true; this.setState({ layer: i }); },
-      buttonStyle: [
-        "display:flex", "align-items:center", "gap:14px", "width:100%", "cursor:pointer",
-        "text-align:left", "padding:18px 18px 18px 16px", "border:0",
-        "border-radius:" + (i === li ? "8px" : "0"),
-        "border-top:1px solid var(--color-divider)",
-        "color:" + (i === li ? "var(--color-text)" : "color-mix(in srgb, var(--color-text) 55%, transparent)"),
-        "background:" + (i === li ? "color-mix(in srgb, var(--color-accent) 14%, transparent)" : "transparent"),
-        "box-shadow:" + (i === li ? "inset 2px 0 0 var(--color-accent)" : "none"),
-        "transition:background 0.3s, color 0.3s"
-      ].join(";")
-    }));
-
     return {
       menuOpen: !!this.state.menu,
       toggleMenu: () => this.setState({ menu: !this.state.menu }),
@@ -365,44 +264,10 @@ class Component extends DCLogic {
       burgerMid: this.menuBar(0, 0) + ";opacity:" + (this.state.menu ? 0 : 1),
       burgerBot: this.menuBar(this.state.menu ? -45 : 0, this.state.menu ? -7 : 0),
       panelStyle: ["display:flex", "align-items:center", "gap:22px", "z-index:39"].join(";"),
-      clock: this.state.clock,
-      layers,
-      activeLayer: this.layerData()[li],
-      solutionCards: this.solutionCardData(),
-      modalities: [
-        { name: "Vision AI", body: "Every camera becomes an operator that understands the work in front of it.", href: "solutions.html?p=vision" },
-        { name: "Robotics AI", body: "The same intelligence picks up the tools and executes the task itself.", href: "solutions.html?p=robotics" }
-      ],
-      heroStats: [
-        { value: "1", label: "Platform, one intelligence" },
-        { value: "4 wks", label: "To a proven pilot" },
-        { value: "24/7", label: "Autonomous coverage" }
-      ],
       roiPreview: [
         { label: "Typical annual value — Vision AI", value: "$363K/yr" },
-        { label: "Typical value recovered — Robotics", value: "$740K/yr" },
+        { label: "Where it runs", value: "On-prem or cloud" },
         { label: "Time to plug in your numbers", value: "< 1 min" }
-      ],
-      tickerItems: (() => {
-        const base = ["Quality inspection", "Safety intelligence", "Downtime detection", "Learning by demonstration", "Machine tending", "Kitting & binning", "Exception alerts", "Embodied AI"];
-        return base.concat(base);
-      })(),
-      pillars: [
-        { kicker: "One platform, applied through cameras", title: "Vision AI: understand the work.",
-          body: "The platform watches quality, safety, and operations through the cameras you already have. Checks are assigned to your standards in plain English.",
-          tags: ["Quality", "Safety", "Operations"] },
-        { kicker: "One platform, applied through machines", title: "Robotics AI: perform the work.",
-          body: "The same intelligence drives robots that learn real factory tasks by demonstration, without fragile programming.",
-          tags: ["Assembly", "Kitting", "Machine tending"] }
-      ],
-      receipts: [
-        { metric: "4 wks", title: "Demonstration to running workflow", body: "On-site pilots go from first demonstration to a robot executing the real task inside four weeks.", source: "Trailblazer pilot path" },
-        { metric: "0", title: "Lines of robot code", body: "Your team teaches the task by showing it. No integrator, no fixturing rebuild, no re-programming when parts drift.", source: "Cognitive robotics" },
-        { metric: "24/7", title: "Operator coverage on existing cameras", body: "Vision operators run continuously on the cameras already on your floor — on-premises, video stays in your network.", source: "Vision AI Operators" }
-      ],
-      validation: [
-        { num: "01", title: "On-site validation", body: "We deploy robots in your factory and teach them your workflow by demonstration over four weeks.", meta: "4 weeks · your floor" },
-        { num: "02", title: "Remote workflow proof", body: "You ship your parts. We teach robots your workflow and share a working demo with your team.", meta: "Off-site · your parts" }
       ]
     };
   }

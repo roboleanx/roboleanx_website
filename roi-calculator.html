@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ROI Calculator — Estimate the Value of Factory Intelligence | RoboLeanX</title>
-<meta name="description" content="Plug in your lines, labor cost, and missed-incident rate to see the annual value of a Vision AI Operator or a Cognitive Robotics cell on your floor.">
+<title>ROI Calculator — What vision AI agents are worth on your floor | PerceptX</title>
+<meta name="description" content="Plug in how often defects, safety incidents, stoppages and starved lines hit your floor, and see the annual value of PerceptX vision agents catching them.">
 <link rel="canonical" href="https://roboleanx.com/roi-calculator.html">
-<meta name="theme-color" content="#0a0c26">
-<link rel="icon" href="assets/logo-x.png">
+<meta name="theme-color" content="#09090a">
+<link rel="icon" href="assets/logo-x-mono.png">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="RoboLeanX">
-<meta property="og:title" content="ROI Calculator — Estimate the Value of Factory Intelligence | RoboLeanX">
-<meta property="og:description" content="Plug in your lines, labor cost, and missed-incident rate to see the annual value of a Vision AI Operator or a Cognitive Robotics cell on your floor.">
+<meta property="og:site_name" content="PerceptX">
+<meta property="og:title" content="ROI Calculator — What vision AI agents are worth on your floor | PerceptX">
+<meta property="og:description" content="Plug in how often defects, safety incidents, stoppages and starved lines hit your floor, and see the annual value of PerceptX vision agents catching them.">
 <meta property="og:url" content="https://roboleanx.com/roi-calculator.html">
-<meta property="og:image" content="https://roboleanx.com/assets/vision-operator-ui.png">
+<meta property="og:image" content="https://roboleanx.com/assets/og-perceptx.png">
 <meta name="twitter:card" content="summary_large_image">
 <script src="./support.js"></script>
 </head>
@@ -24,31 +24,9 @@
 <script src="_ds/nocturne-0ac039f3-543c-4351-9503-0f3348271f86/_ds_bundle.js"></script>
 <script src="./image-slot.js"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="perceptx.css">
 <style>
-  :root {
-    --font-heading: "Space Grotesk", "Inter", system-ui, sans-serif;
-    --font-heading-weight: 500;
-    --color-bg: #0a0c26;
-    --color-surface: #151a3a;
-    --color-accent: #38b6f0;
-    --color-accent-100: #ecfbff;
-    --color-accent-200: #cdf1fb;
-    --color-accent-300: #9fe4f7;
-    --color-accent-400: #6fd0f5;
-    --color-accent-500: #38b6f0;
-    --color-accent-600: #2b7fd4;
-    --color-accent-700: #24528f;
-    --color-accent-800: #1c2a63;
-    --color-accent-900: #131b46;
-    --color-section: #141a4a;
-    --color-section-glow: #23276b;
-    --color-divider: color-mix(in srgb, #cfe8ff 16%, transparent);
-  }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; overflow-x: hidden; background: #0a0c26; }
-  @keyframes revealUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
-  @keyframes pulseRing { 0% { box-shadow: 0 0 0 0 rgba(56,182,240,0.35); } 70% { box-shadow: 0 0 0 14px rgba(56,182,240,0); } 100% { box-shadow: 0 0 0 0 rgba(56,182,240,0); } }
   input[type="range"] { accent-color: var(--color-accent); height: 4px; }
   input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { opacity: 0.6; }
 </style>
@@ -77,15 +55,15 @@
 </style>
 </helmet>
 
-<div style="background: #0a0c26; color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
+<div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); min-height: 100vh; position: relative;">
 
-  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(820px 560px at 84% -12%, rgba(34,211,238,0.12), transparent 70%), radial-gradient(700px 500px at 2% 22%, rgba(59,130,246,0.13), transparent 70%), radial-gradient(640px 480px at 94% 58%, rgba(224,38,200,0.09), transparent 70%);"></div>
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(900px 520px at 50% -18%, rgba(247,215,168,0.10), transparent 70%);"></div>
 
-  <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, #0a0c26 78%, transparent); border-bottom: 1px solid var(--color-divider);">
+  <header style="position: sticky; top: 0; z-index: 40; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--color-bg) 78%, transparent); border-bottom: 1px solid var(--color-divider);">
     <nav style="max-width: 1220px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; row-gap: 8px; gap: 22px; padding: 8px 32px;">
       <a href="index.html" data-r="brand" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--color-text); margin-right: auto;">
-        <img src="assets/logo-x.png" alt="RoboLeanX" class="lighten" style="width: 40px; height: 40px; border-radius: 9px;">
-        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 19px; letter-spacing: -0.02em; line-height: 1.1;">RoboLeanX</span>
+        <span class="logo-mark" role="img" aria-label="PerceptX" style="width: 38px; height: 38px;"></span>
+        <span class="lockup"><span class="lockup-name">PerceptX</span><span class="lockup-sub">A RoboLeanX brand</span></span>
       </a>
       <button type="button" data-r="burger" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; background: transparent; border: 1px solid var(--color-divider); border-radius: 10px; cursor: pointer;">
         <span style="display: grid; gap: 5px; width: 20px;">
@@ -96,34 +74,28 @@
       </button>
       <div data-r="navpanel" data-open="{{ menuOpen }}" onClick="{{ closeMenu }}" style="{{ panelStyle }}">
         <a href="index.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Home</a>
-        <a href="solutions.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Solutions</a>
+        <a href="/#agents" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Use cases</a>
         <a href="about.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">About</a>
         <a href="roi-calculator.html" data-r="navlink" style="color: var(--color-accent); text-decoration: none; font-size: 13.5px; white-space: nowrap;">ROI Calculator</a>
         <a href="contact.html" data-r="navlink" style="color: inherit; text-decoration: none; font-size: 13.5px; white-space: nowrap; opacity: 0.72;" style-hover="opacity: 1; color: var(--color-accent);">Contact</a>
-        <a data-r="panelcta" href="contact.html" class="btn" style="font-size: 13px; white-space: nowrap; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#0a0c26,#0a0c26), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Book demo</a>
+        <a data-r="panelcta" href="contact.html" class="btn btn-ink" style="font-size: 13px; white-space: nowrap; ">Book demo</a>
       </div>
     </nav>
   </header>
 
   <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 88px 32px 0; animation: revealUp 0.7s cubic-bezier(0.2,0.7,0.2,1) both;">
-    <div style="font-size: 11.5px; letter-spacing: 0.14em; text-transform: uppercase; background-image: linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); -webkit-background-clip: text; background-clip: text; color: transparent; width: fit-content; margin-bottom: 20px;">ROI calculator</div>
+    <div class="eyebrow" style="margin-bottom: 20px;">ROI calculator</div>
     <h1 style="font-size: clamp(36px, 4.4vw, 58px); line-height: 1.06; letter-spacing: -0.03em; max-width: 24ch; margin: 0 0 20px;">{{ headline }}</h1>
-    <p style="font-size: 17px; line-height: 1.6; max-width: 56ch; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0 0 30px;">{{ subhead }}</p>
-    <div style="display: inline-flex; padding: 4px; border: 1px solid var(--color-divider); border-radius: 999px; gap: 4px;">
-      <sc-for list="{{ modes }}" as="m" hint-placeholder-count="2">
-        <button type="button" onClick="{{ m.select }}" style="{{ m.style }}">{{ m.label }}</button>
-      </sc-for>
-    </div>
+    <p style="font-size: 17px; line-height: 1.6; max-width: 56ch; color: color-mix(in srgb, var(--color-text) 72%, transparent); margin: 0;">{{ subhead }}</p>
   </section>
 
   <section style="position: relative; z-index: 1; max-width: 1220px; margin: 0 auto; padding: 48px 32px 0;">
     <div data-r="calcgrid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: start;">
 
       <div>
-        <sc-if value="{{ isVision }}" hint-placeholder-val="{{ true }}">
           <div>
             <sc-for list="{{ visFactors }}" as="f" hint-placeholder-count="4">
-              <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
+              <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, var(--color-bg))); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
                 <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 14px; margin-bottom: 5px;">
                   <span style="font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em;">{{ f.label }}</span>
                   <span style="font-family: var(--font-heading); font-size: 14px; color: var(--color-accent-300); white-space: nowrap;">{{ f.rowValueLabel }}</span>
@@ -141,79 +113,15 @@
                 </div>
               </div>
             </sc-for>
-            <p style="font-size: 12.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 50%, transparent); margin: 4px 2px 0;">Value assumes Operator AI prevents 90% of quality escapes, 85% of material starve-outs, 70% of recordable incidents, and 60% of unplanned line stoppages.</p>
+            <p style="font-size: 12.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 50%, transparent); margin: 4px 2px 0;">Value assumes PerceptX agents prevent 90% of quality escapes, 85% of material starve-outs, 70% of recordable incidents, and 60% of unplanned line stoppages.</p>
           </div>
-        </sc-if>
 
-        <sc-if value="{{ isRobotics }}" hint-placeholder-val="{{ false }}">
-          <div>
-            <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
-              <label for="r-workers" style="display: block; font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em; margin-bottom: 5px;">Workers currently doing this repetitive task</label>
-              <p style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 16px;">Headcount assigned to the kitting, tending, or assembly step you'd hand to a robot cell.</p>
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <input id="r-workers" class="input" type="number" min="1" max="60" value="{{ roboWorkers }}" onChange="{{ setRoboWorkers }}" style="max-width: 110px;">
-                <span style="font-size: 13.5px; color: var(--color-accent-300); white-space: nowrap;">{{ roboWorkersLabel }}</span>
-              </div>
-            </div>
-
-            <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
-              <label style="display: block; font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em; margin-bottom: 5px;">Hours per week, per worker, on this task</label>
-              <p style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 16px;">Part-shift assignment, full shift, or the task stretched across two shifts.</p>
-              <div class="seg">
-                <sc-for list="{{ roboHourOpts }}" as="h" hint-placeholder-count="3">
-                  <label class="seg-opt" style="{{ h.style }}">
-                    <input type="radio" name="robo-hours" onChange="{{ h.select }}" checked="{{ h.active }}">
-                    {{ h.label }}
-                  </label>
-                </sc-for>
-              </div>
-            </div>
-
-            <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
-              <label for="r-labor" style="display: block; font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em; margin-bottom: 5px;">Fully loaded labor cost, per hour</label>
-              <p style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 16px;">Wages plus benefits and overhead for the role doing this task today.</p>
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 55%, transparent);">$</span>
-                <input id="r-labor" class="input" type="number" min="10" max="150" value="{{ roboLabor }}" onChange="{{ setRoboLabor }}" style="max-width: 110px;">
-                <span style="font-size: 13.5px; color: var(--color-accent-300); white-space: nowrap;">per hour</span>
-              </div>
-            </div>
-
-            <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
-              <label for="r-share" style="display: block; font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em; margin-bottom: 5px;">Share of the task you'd hand to a robot cell</label>
-              <p style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 16px;">Most pilots start with the repeatable core of the job and leave exceptions to your team.</p>
-              <div style="display: flex; align-items: center; gap: 16px;">
-                <input id="r-share" type="range" min="20" max="100" step="5" value="{{ roboShare }}" onChange="{{ setRoboShare }}" style="flex: 1;">
-                <span style="min-width: 100px; text-align: right; font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); white-space: nowrap;">{{ roboShareLabel }}</span>
-              </div>
-            </div>
-
-            <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm); margin-bottom: 14px;">
-              <label for="r-turnover" style="display: block; font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em; margin-bottom: 5px;">Annual turnover on this role</label>
-              <p style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 16px;">Repetitive stations are usually the hardest seats to keep filled — this is what drives rehiring.</p>
-              <div style="display: flex; align-items: center; gap: 16px;">
-                <input id="r-turnover" type="range" min="0" max="100" step="5" value="{{ roboTurnover }}" onChange="{{ setRoboTurnover }}" style="flex: 1;">
-                <span style="min-width: 100px; text-align: right; font-family: var(--font-heading); font-size: 15px; color: var(--color-accent-300); white-space: nowrap;">{{ roboTurnoverLabel }}</span>
-              </div>
-            </div>
-
-            <div style="padding: 22px 22px 24px; border-radius: var(--radius-lg); background: linear-gradient(165deg, var(--color-surface), color-mix(in srgb, var(--color-surface) 45%, #0a0c26)); box-shadow: var(--shadow-sm);">
-              <label for="r-rehire" style="display: block; font-family: var(--font-heading); font-size: 15.5px; letter-spacing: -0.01em; margin-bottom: 5px;">Cost to hire and retrain a replacement</label>
-              <p style="font-size: 13px; line-height: 1.5; color: color-mix(in srgb, var(--color-text) 60%, transparent); margin: 0 0 16px;">Recruiting, onboarding, and the ramp-up dip in output while a new hire learns the station.</p>
-              <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="font-size: 14px; color: color-mix(in srgb, var(--color-text) 55%, transparent);">$</span>
-                <input id="r-rehire" class="input" type="number" min="0" max="30000" step="100" value="{{ roboRehire }}" onChange="{{ setRoboRehire }}" style="max-width: 130px;">
-                <span style="font-size: 13.5px; color: var(--color-accent-300); white-space: nowrap;">per hire</span>
-              </div>
-            </div>
-          </div>
-        </sc-if>
       </div>
 
       <div data-r="calcresult" style="position: sticky; top: 96px;">
-        <div style="position: relative; border-radius: var(--radius-lg); padding: 34px 28px 30px; overflow: hidden; box-shadow: var(--shadow-md); background: radial-gradient(460px 280px at 18% 0%, rgba(34,211,238,0.22), transparent 70%), radial-gradient(460px 280px at 92% 8%, rgba(224,38,200,0.18), transparent 70%), radial-gradient(760px 420px at 50% 0%, var(--color-section-glow), var(--color-section) 74%);">
+        <div style="position: relative; border-radius: var(--radius-lg); padding: 34px 28px 30px; overflow: hidden; box-shadow: var(--shadow-md); background: radial-gradient(520px 260px at 50% 0%, rgba(247,215,168,0.14), transparent 70%), var(--color-surface); border: 1px solid color-mix(in srgb, var(--glow) 28%, transparent);">
           <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-accent-300); margin-bottom: 14px;">{{ resultEyebrow }}</div>
-          <div style="font-family: var(--font-heading); font-size: clamp(38px, 4.6vw, 54px); letter-spacing: -0.03em; line-height: 1; margin-bottom: 12px; background-image: linear-gradient(96deg,#ecfbff,#cdf1fb 55%,#e9f6ff); -webkit-background-clip: text; background-clip: text; color: transparent;">{{ headlineValue }}</div>
+          <div style="font-family: var(--font-heading); font-size: clamp(38px, 4.6vw, 54px); letter-spacing: -0.03em; line-height: 1; margin-bottom: 12px; color: var(--color-accent-800);">{{ headlineValue }}</div>
           <p style="font-size: 14.5px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 78%, transparent); margin: 0 0 26px;">{{ headlineQualifier }}</p>
           <div style="display: grid; gap: 2px; margin-bottom: 26px;">
             <sc-for list="{{ stats }}" as="st" hint-placeholder-count="3">
@@ -223,31 +131,31 @@
               </div>
             </sc-for>
           </div>
-          <a href="{{ ctaHref }}" class="btn" style="display: flex; width: 100%; justify-content: center; white-space: nowrap; padding: 13px 20px; font-size: 14.5px; font-weight: 600; color: #0a0c26; border: 1px solid transparent; background: #ecfbff;">{{ ctaLabel }}</a>
+          <a href="{{ ctaHref }}" class="btn btn-paper" style="display: flex; width: 100%; justify-content: center; white-space: nowrap; padding: 13px 20px; font-size: 14.5px; font-weight: 600;">{{ ctaLabel }}</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <section style="position: relative; z-index: 1; margin: 104px 0 0; padding: 76px 32px; text-align: center; background: radial-gradient(620px 300px at 24% 0%, rgba(34,211,238,0.20), transparent 70%), radial-gradient(620px 320px at 78% 8%, rgba(224,38,200,0.18), transparent 70%), radial-gradient(900px 420px at 50% 0%, var(--color-section-glow), var(--color-section) 72%);">
+  <section style="position: relative; z-index: 1; margin: 104px 0 0; padding: 76px 32px; text-align: center; background: radial-gradient(760px 300px at 50% 118%, rgba(247,215,168,0.30), transparent 70%), var(--color-bg); border-top: 1px solid var(--color-divider);">
     <h2 style="font-size: clamp(28px, 3.2vw, 42px); line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 12px;">Not sure which number applies to your floor?</h2>
     <p style="font-size: 17px; line-height: 1.55; color: color-mix(in srgb, var(--color-text) 74%, transparent); margin: 0 0 26px;">Walk us through your line and we'll build the case with your real numbers.</p>
-    <a href="contact.html" class="btn" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; color: #e9f6ff; border: 1px solid transparent; background-image: linear-gradient(#141a4a,#141a4a), linear-gradient(96deg,#22d3ee 0%,#3b82f6 38%,#8b5cf6 64%,#e026c8 100%); background-origin: border-box; background-clip: padding-box, border-box;">Talk to us</a>
+    <a href="contact.html" class="btn btn-ink" style="white-space: nowrap; padding: 12px 22px; font-size: 14.5px; ">Talk to us</a>
   </section>
 
   <footer style="position: relative; z-index: 1; border-top: 1px solid var(--color-divider);">
     <div style="max-width: 1220px; margin: 0 auto; padding: 40px 32px 0; display: flex; align-items: center; gap: 30px; flex-wrap: wrap;">
       <span style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: color-mix(in srgb, var(--color-text) 45%, transparent);">Programs &amp; partners</span>
       <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
-        <img src="assets/nvidia-inception.png" alt="NVIDIA Inception Program" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 12px 16px;">
-        <img src="assets/google-for-startups.png" alt="Google for Startups" style="height: 72px; width: auto; background: #f3f5fe; border-radius: var(--radius-md); padding: 16px 20px;">
+        <img src="assets/nvidia-inception.png" alt="NVIDIA Inception Program" style="height: 72px; width: auto; background: #f4f1ec; border-radius: var(--radius-md); padding: 12px 16px;">
+        <img src="assets/google-for-startups.png" alt="Google for Startups" style="height: 72px; width: auto; background: #f4f1ec; border-radius: var(--radius-md); padding: 16px 20px;">
       </div>
     </div>
     <div style="max-width: 1220px; margin: 0 auto; padding: 44px 32px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; font-size: 13px; color: color-mix(in srgb, var(--color-text) 58%, transparent);">
       <div>
-        <div style="font-family: var(--font-heading); font-size: 15px; color: var(--color-text); margin-bottom: 8px;">RoboLeanX</div>
-        <div>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
+        <div class="lockup" style="color: var(--color-text); margin-bottom: 12px;"><span class="lockup-name" style="font-size: 17px;">PerceptX</span></div>
+        <div>RoboLeanX LLC<br>3540 Toringdon Way, Suite 200<br>Charlotte, NC 28277 · USA</div>
       </div>
       <div>
         <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 8px;">Contact</div>
@@ -260,8 +168,6 @@
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:1100}}">
-const WEEKS_PER_YEAR = 52;
-const ROBO_HOUR_OPTIONS = [20, 40, 60];
 const LOW_VALUE_THRESHOLD = 2000;
 const PRODUCTION_DAYS_PER_YEAR = 250;
 
@@ -317,10 +223,7 @@ const VISION_DEFAULT_STATE = VISION_FACTORS.reduce((acc, f) => {
 }, {});
 
 class Component extends DCLogic {
-  state = Object.assign({
-    menu: false, mode: 0,
-    roboWorkers: 10, roboHoursIdx: 1, roboLabor: 43, roboShare: 80, roboTurnover: 45, roboRehire: 6800
-  }, VISION_DEFAULT_STATE);
+  state = Object.assign({ menu: false }, VISION_DEFAULT_STATE);
 
   setNum(key, min, max) {
     return e => {
@@ -333,20 +236,6 @@ class Component extends DCLogic {
     return ["display:block", "height:2px", "border-radius:2px", "background:var(--color-text)",
       "transition:transform 0.28s cubic-bezier(0.2,0.7,0.2,1), opacity 0.2s",
       "transform:translateY(" + y + "px) rotate(" + rot + "deg)"].join(";");
-  }
-
-  modePill(active) {
-    return [
-      "cursor:pointer", "border:0", "border-radius:999px", "padding:9px 18px",
-      "font-family:var(--font-heading)", "font-size:13.5px", "white-space:nowrap",
-      "color:" + (active ? "#ecfbff" : "color-mix(in srgb, var(--color-text) 58%, transparent)"),
-      "background:" + (active ? "linear-gradient(96deg, rgba(34,211,238,0.28), rgba(59,130,246,0.26) 45%, rgba(224,38,200,0.24))" : "transparent"),
-      "transition:background 0.3s, color 0.3s"
-    ].join(";");
-  }
-
-  segStyle(active) {
-    return active ? "color:var(--color-accent);box-shadow:inset 0 0 0 1px var(--color-accent);" : "";
   }
 
   computeVision(s) {
@@ -362,33 +251,16 @@ class Component extends DCLogic {
     return { rows, eventsAvoided, largest, perDay, total: annualValue };
   }
 
-  computeRobotics(s) {
-    const hoursPerWeek = ROBO_HOUR_OPTIONS[s.roboHoursIdx];
-    const share = s.roboShare / 100;
-    const automatedHours = s.roboWorkers * hoursPerWeek * share * WEEKS_PER_YEAR;
-    const valueFromLabor = automatedHours * s.roboLabor;
-    const positionsAutomated = s.roboWorkers * share;
-    const turnoverSavings = positionsAutomated * (s.roboTurnover / 100) * s.roboRehire;
-    return { automatedHours, valueFromLabor, positionsAutomated, turnoverSavings, total: valueFromLabor + turnoverSavings };
-  }
-
   renderVals() {
     const s = this.state;
-    const isVision = s.mode === 0;
-
     const v = this.computeVision(s);
-    const r = this.computeRobotics(s);
-    const total = isVision ? v.total : r.total;
+    const total = v.total;
     const strong = total >= LOW_VALUE_THRESHOLD;
 
-    const stats = isVision ? [
+    const stats = [
       { label: "Events prevented / year", value: fmtNum(v.eventsAvoided) + "/yr" },
       { label: "Biggest value driver", value: v.largest.label + " — " + fmtMoney(v.largest.rowValue) },
       { label: "Value per production day", value: fmtMoneyFull(v.perDay) + "/day" }
-    ] : [
-      { label: "Labor hours redeployed to other work", value: fmtNum(r.automatedHours) + " hrs/yr" },
-      { label: "Headcount-equivalent freed up", value: r.positionsAutomated.toFixed(1) + " FTE" },
-      { label: "Turnover / rehire cost avoided", value: fmtMoney(r.turnoverSavings) + "/yr" }
     ];
 
     return {
@@ -400,14 +272,8 @@ class Component extends DCLogic {
       burgerBot: this.menuBar(s.menu ? -45 : 0, s.menu ? -7 : 0),
       panelStyle: ["display:flex", "align-items:center", "gap:22px", "z-index:39"].join(";"),
 
-      isVision, isRobotics: !isVision,
-      headline: isVision ? "What does it cost when nobody is watching?" : "What is idle, repetitive labor actually costing you?",
-      subhead: isVision
-        ? "Plug in how often each failure mode hits your line and what it costs — see the annual value Operator AI delivers by catching it."
-        : "Plug in your headcount, hours, and turnover on this task — see the annual value of handing part of it to a robot cell.",
-      modes: ["Vision AI Operator", "Cognitive Robotics"].map((label, i) => ({
-        label, select: () => this.setState({ mode: i }), style: this.modePill(i === s.mode)
-      })),
+      headline: "What does it cost when nobody is watching?",
+      subhead: "Plug in how often each failure hits your floor and what it costs, and see the annual value of PerceptX agents catching it.",
 
       visFactors: v.rows.map(row => ({
         label: row.label,
@@ -421,39 +287,15 @@ class Component extends DCLogic {
         setCost: this.setNum(row.costKey, 0, row.costMax)
       })),
 
-      roboWorkers: s.roboWorkers,
-      roboWorkersLabel: s.roboWorkers === 1 ? "worker" : "workers",
-      setRoboWorkers: this.setNum("roboWorkers", 1, 60),
-      roboHourOpts: ROBO_HOUR_OPTIONS.map((h, i) => ({
-        label: h + " hrs", active: i === s.roboHoursIdx,
-        select: () => this.setState({ roboHoursIdx: i }),
-        style: this.segStyle(i === s.roboHoursIdx)
-      })),
-      roboLabor: s.roboLabor,
-      setRoboLabor: this.setNum("roboLabor", 10, 150),
-      roboShare: s.roboShare,
-      roboShareLabel: s.roboShare + "%",
-      setRoboShare: this.setNum("roboShare", 20, 100),
-      roboTurnover: s.roboTurnover,
-      roboTurnoverLabel: s.roboTurnover + "%",
-      setRoboTurnover: this.setNum("roboTurnover", 0, 100),
-      roboRehire: s.roboRehire,
-      setRoboRehire: this.setNum("roboRehire", 0, 30000),
 
       resultEyebrow: strong ? "Estimated annual value" : "At these inputs",
       headlineValue: fmtMoney(total) + "/yr",
       headlineQualifier: strong
-        ? (isVision
-            ? "What Operator AI saves you by catching these failures before they turn into cost."
-            : "If a robot cell picks up " + s.roboShare + "% of this task across " + s.roboWorkers + " " + (s.roboWorkers === 1 ? "operator" : "operators") + ".")
-        : (isVision
-            ? "That's not much value on the table yet — nudge the counts or costs above toward your real numbers."
-            : "That's not much on the table yet — bump the hours, cost, or share above toward your real numbers."),
+        ? "What PerceptX agents save you by catching these failures before they turn into cost."
+        : "That's not much value on the table yet. Nudge the counts or costs above toward your real numbers.",
       stats,
-      ctaHref: isVision ? "contact.html#operator-ai" : "contact.html#pilot",
-      ctaLabel: isVision
-        ? "Scope Operator AI to capture " + fmtMoney(total) + "/yr"
-        : "Scope a pilot against " + fmtMoney(total)
+      ctaHref: "contact.html#demo",
+      ctaLabel: "Scope PerceptX to capture " + fmtMoney(total) + "/yr"
     };
   }
 }

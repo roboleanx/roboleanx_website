@@ -10,17 +10,16 @@
 /contact                 /contact.html              301
 /join-pilot              /contact.html#pilot        301
 
-# Vision / operator pages → Solutions, vision tab preselected
-/operatorai              /solutions.html?p=vision   301
-/quality-inspection-ai   /solutions.html?p=vision   301
-/safetyai                /solutions.html?p=vision   301
-/safetyai-1              /solutions.html?p=vision   301
+# Vision / operator pages → home page use cases (the Solutions page was retired)
+/operatorai              /#agents                   301
+/quality-inspection-ai   /#agents                   301
+/safetyai                /#agents                   301
+/safetyai-1              /#agents                   301
 
-# Robotics → Solutions, robotics tab preselected
-/robotics                /solutions.html?p=robotics 301
-
-# Old Solutions folder URL
-/solutions               /solutions.html            301
+# Retired Solutions page and robotics
+/solutions               /#agents                   301
+/solutions.html          /#agents                   301
+/robotics                /                          301
 
 # Retired
 /store                   /                          301
